@@ -1,0 +1,124 @@
+{
+  "protocol": "fate-interface-simple-v1",
+  "k": 4,
+  "rows": [
+    {
+      "seed": 7,
+      "scene": "park",
+      "first": 0.6608,
+      "pool_mean": 0.6202,
+      "pool_scores": [
+        0.6608,
+        0.5987,
+        0.5734,
+        0.6479
+      ],
+      "select": 0.6608,
+      "select_abstained": false,
+      "select_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_interface\\pool\\s7_park_c0.png",
+      "select_X_sofia_cos": 0.3619,
+      "select_X_chosen_vs_aria": 0.6479
+    },
+    {
+      "seed": 7,
+      "scene": "harbour",
+      "first": 0.6187,
+      "pool_mean": 0.5999,
+      "pool_scores": [
+        0.6187,
+        0.615,
+        0.597,
+        0.5689
+      ],
+      "select": 0.6187,
+      "select_abstained": false,
+      "select_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_interface\\pool\\s7_harbour_c0.png",
+      "select_X_sofia_cos": 0.3546,
+      "select_X_chosen_vs_aria": 0.615
+    },
+    {
+      "seed": 8,
+      "scene": "park",
+      "first": 0.5652,
+      "pool_mean": 0.5551,
+      "pool_scores": [
+        0.5652,
+        0.5503,
+        0.6031,
+        0.5016
+      ],
+      "select": 0.6031,
+      "select_abstained": false,
+      "select_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_interface\\pool\\s8_park_c2.png",
+      "select_X_sofia_cos": 0.3413,
+      "select_X_chosen_vs_aria": 0.5652
+    },
+    {
+      "seed": 8,
+      "scene": "harbour",
+      "first": 0.682,
+      "pool_mean": 0.6144,
+      "pool_scores": [
+        0.682,
+        0.5592,
+        0.6148,
+        0.6017
+      ],
+      "select": 0.682,
+      "select_abstained": false,
+      "select_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_interface\\pool\\s8_harbour_c0.png",
+      "select_X_sofia_cos": 0.3423,
+      "select_X_chosen_vs_aria": 0.682
+    },
+    {
+      "seed": 9,
+      "scene": "park",
+      "first": 0.6406,
+      "pool_mean": 0.618,
+      "pool_scores": [
+        0.6406,
+        0.5384,
+        0.6392,
+        0.6539
+      ],
+      "select": 0.6539,
+      "select_abstained": false,
+      "select_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_interface\\pool\\s9_park_c3.png",
+      "select_X_sofia_cos": 0.4231,
+      "select_X_chosen_vs_aria": 0.6392
+    },
+    {
+      "seed": 9,
+      "scene": "harbour",
+      "first": 0.6525,
+      "pool_mean": 0.6538,
+      "pool_scores": [
+        0.6525,
+        0.6204,
+        0.7208,
+        0.6214
+      ],
+      "select": 0.7208,
+      "select_abstained": false,
+      "select_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_interface\\pool\\s9_harbour_c2.png",
+      "select_X_sofia_cos": 0.4081,
+      "select_X_chosen_vs_aria": 0.7208
+    }
+  ],
+  "summary": {
+    "first_mean": 0.6366,
+    "pool_mean": 0.6102,
+    "select_mean": 0.6566,
+    "select_min": 0.6031,
+    "select_pass_rate": 1.0,
+    "select_gain_over_first": 0.02,
+    "select_gain_over_pool_mean": 0.0464,
+    "designated_X_mean_cos_to_X": 0.3719,
+    "designated_X_picks_cos_to_aria": 0.645
+  },
+  "reference": {
+    "supply_only_detailed_neg_L4": 0.6102,
+    "ip_plugin_uniform": 0.5811,
+    "different_person": 0.1522
+  }
+}

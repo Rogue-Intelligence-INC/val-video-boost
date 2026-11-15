@@ -1,0 +1,110 @@
+{
+  "protocol": "context-diagnostic-L3-dose-v1",
+  "arms": {
+    "center_A_s0.03": {
+      "strength": 0.03,
+      "donor": "A_aria",
+      "rows": [
+        {
+          "seed": 7,
+          "seconds": 4.56,
+          "face": true,
+          "cos_to_A": 0.3094,
+          "cos_to_B": 0.078,
+          "identity_index": 0.2314,
+          "pixel_dist_to_prompt_only": 41.487
+        },
+        {
+          "seed": 8,
+          "seconds": 3.74,
+          "face": true,
+          "cos_to_A": 0.3469,
+          "cos_to_B": 0.0731,
+          "identity_index": 0.2738,
+          "pixel_dist_to_prompt_only": 47.315
+        }
+      ],
+      "identity_index_mean": 0.2526
+    },
+    "center_B_s0.03": {
+      "strength": 0.03,
+      "donor": "B_marco",
+      "rows": [
+        {
+          "seed": 7,
+          "seconds": 3.43,
+          "face": true,
+          "cos_to_A": 0.3881,
+          "cos_to_B": 0.0864,
+          "identity_index": 0.3017,
+          "pixel_dist_to_prompt_only": 45.326
+        },
+        {
+          "seed": 8,
+          "seconds": 3.5,
+          "face": true,
+          "cos_to_A": 0.3568,
+          "cos_to_B": 0.1523,
+          "identity_index": 0.2045,
+          "pixel_dist_to_prompt_only": 55.203
+        }
+      ],
+      "identity_index_mean": 0.2531
+    },
+    "center_A_s0.06": {
+      "strength": 0.06,
+      "donor": "A_aria",
+      "rows": [
+        {
+          "seed": 7,
+          "seconds": 3.46,
+          "face": true,
+          "cos_to_A": 0.1263,
+          "cos_to_B": 0.0329,
+          "identity_index": 0.0934,
+          "pixel_dist_to_prompt_only": 49.185
+        },
+        {
+          "seed": 8,
+          "seconds": 3.43,
+          "face": true,
+          "cos_to_A": 0.2665,
+          "cos_to_B": 0.0572,
+          "identity_index": 0.2093,
+          "pixel_dist_to_prompt_only": 61.171
+        }
+      ],
+      "identity_index_mean": 0.1514
+    },
+    "center_B_s0.06": {
+      "strength": 0.06,
+      "donor": "B_marco",
+      "rows": [
+        {
+          "seed": 7,
+          "seconds": 3.61,
+          "face": true,
+          "cos_to_A": 0.1616,
+          "cos_to_B": 0.022,
+          "identity_index": 0.1396,
+          "pixel_dist_to_prompt_only": 57.323
+        },
+        {
+          "seed": 8,
+          "seconds": 4.7,
+          "face": true,
+          "cos_to_A": 0.1442,
+          "cos_to_B": 0.0666,
+          "identity_index": 0.0776,
+          "pixel_dist_to_prompt_only": 60.005
+        }
+      ],
+      "identity_index_mean": 0.1086
+    }
+  },
+  "donor_gap_by_strength": {
+    "0.03": -0.0005,
+    "0.06": 0.0428,
+    "0.015": 0.0953
+  }
+}

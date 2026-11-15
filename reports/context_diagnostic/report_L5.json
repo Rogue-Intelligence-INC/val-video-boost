@@ -1,0 +1,137 @@
+{
+  "protocol": "context-diagnostic-L5-stacking-v1",
+  "arms": {
+    "detailedneg_centerA": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 4.14,
+          "arcface_cos": 0.564
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 3.67,
+          "arcface_cos": 0.6129
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 4.83,
+          "arcface_cos": 0.5271
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 4.73,
+          "arcface_cos": 0.5365
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 4.06,
+          "arcface_cos": 0.6018
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 4.02,
+          "arcface_cos": 0.6791
+        }
+      ],
+      "mean_cos": 0.5869,
+      "min_cos": 0.5271
+    },
+    "detailedneg_centerB": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 3.84,
+          "arcface_cos": 0.5579
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 4.23,
+          "arcface_cos": 0.5941
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 4.32,
+          "arcface_cos": 0.5732
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 4.48,
+          "arcface_cos": 0.6288
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 5.53,
+          "arcface_cos": 0.5888
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 4.8,
+          "arcface_cos": 0.6428
+        }
+      ],
+      "mean_cos": 0.5976,
+      "min_cos": 0.5579
+    },
+    "detailed_paraphrased": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 3.02,
+          "arcface_cos": 0.5067
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 2.92,
+          "arcface_cos": 0.5754
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 2.67,
+          "arcface_cos": 0.4439
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 2.54,
+          "arcface_cos": 0.4572
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 2.39,
+          "arcface_cos": 0.41
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 2.71,
+          "arcface_cos": 0.6404
+        }
+      ],
+      "mean_cos": 0.5056,
+      "min_cos": 0.41
+    }
+  },
+  "donor_gap_on_detailed": -0.0107,
+  "reference": {
+    "detailed": 0.5889,
+    "detailed_neg": 0.6102,
+    "donor_gap_on_short_L2": 0.0953
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "protocol": "val-video-boost-flux-character-v1",
+  "model": "YuCollection/FLUX.1-schnell-Diffusers",
+  "profile": {
+    "root": "transformer",
+    "block_count": 57,
+    "block_classes": {
+      "FluxTransformerBlock": 19,
+      "FluxSingleTransformerBlock": 38
+    },
+    "sites_per_block": {
+      "legacy": 1,
+      "full": 4,
+      "total": 6
+    },
+    "hidden_sizes": [
+      3072
+    ]
+  },
+  "strength": 0.0166,
+  "arms": {
+    "baseline": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "seconds": 11.35,
+          "face": true,
+          "arcface_cos_to_hero": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 4.88,
+          "face": true,
+          "arcface_cos_to_hero": 0.3767
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 4.67,
+          "face": true,
+          "arcface_cos_to_hero": 0.4098
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "seconds": 4.64,
+          "face": true,
+          "arcface_cos_to_hero": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 4.65,
+          "face": true,
+          "arcface_cos_to_hero": 0.5164
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 4.66,
+          "face": true,
+          "arcface_cos_to_hero": 0.5147
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "seconds": 4.64,
+          "face": true,
+          "arcface_cos_to_hero": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 4.65,
+          "face": true,
+          "arcface_cos_to_hero": 0.5273
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 4.62,
+          "face": true,
+          "arcface_cos_to_hero": 0.5349
+        }
+      ],
+      "mean_cos": 0.48,
+      "min_cos": 0.3767,
+      "faces": 9
+    },
+    "triad_total": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "seconds": 5.09,
+          "face": true,
+          "arcface_cos_to_hero": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 5.14,
+          "face": true,
+          "arcface_cos_to_hero": 0.4557
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 5.01,
+          "face": true,
+          "arcface_cos_to_hero": 0.466
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "seconds": 5.12,
+          "face": true,
+          "arcface_cos_to_hero": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 4.99,
+          "face": true,
+          "arcface_cos_to_hero": 0.5519
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 5.25,
+          "face": true,
+          "arcface_cos_to_hero": 0.5373
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "seconds": 5.19,
+          "face": true,
+          "arcface_cos_to_hero": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 5.13,
+          "face": true,
+          "arcface_cos_to_hero": 0.3254
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 5.09,
+          "face": true,
+          "arcface_cos_to_hero": 0.497
+        }
+      ],
+      "mean_cos": 0.4722,
+      "min_cos": 0.3254,
+      "faces": 9
+    }
+  },
+  "comparison": {
+    "juggernaut_baseline": 0.471,
+    "juggernaut_triad": 0.4333,
+    "juggernaut_ip_face": 0.5811,
+    "flux_baseline": 0.48,
+    "flux_triad": 0.4722
+  },
+  "verdicts": {
+    "flux_beats_juggernaut_baseline": true,
+    "flux_patch_beats_flux_baseline": false,
+    "flux_patch_reaches_ip_level": false
+  }
+}

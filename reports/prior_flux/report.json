@@ -1,0 +1,155 @@
+{
+  "protocol": "valhalla-flux-schnell-v1",
+  "model": "YuCollection/FLUX.1-schnell-Diffusers",
+  "load_strategy": "group_offload block_level + encoders on GPU only for encode_prompt",
+  "slow_path_reference": {
+    "strategy": "enable_model_cpu_offload",
+    "baseline_sign_seconds": 577.43
+  },
+  "steps": 4,
+  "profile": {
+    "root": "transformer",
+    "block_count": 57,
+    "block_classes": {
+      "FluxTransformerBlock": 19,
+      "FluxSingleTransformerBlock": 38
+    },
+    "sites_per_block": {
+      "legacy": 1,
+      "full": 4,
+      "total": 6
+    },
+    "hidden_sizes": []
+  },
+  "plan": {
+    "mode": "total",
+    "body_source": "triad",
+    "steps": 4,
+    "base_strength": 0.015,
+    "surface_scale": 1.108,
+    "step_scale": 1.0,
+    "body_factor": 1.0,
+    "recommended_strength": 0.0166,
+    "probe_ladder": [
+      0.0083,
+      0.0166,
+      0.0332,
+      0.0665
+    ]
+  },
+  "chosen_strength": 0.0166,
+  "fixed_strength_reference": 0.015,
+  "sign": {
+    "baseline_seconds_slow_path": 577.43,
+    "adaptive_seconds": 8.23,
+    "cross_patch_l2_vs_baseline": 37.198,
+    "baseline_stats": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mean": 153.32,
+      "std": 62.9,
+      "sharpness": 261.0,
+      "clipped_frac": 0.0057,
+      "saturation": 22.8,
+      "blank": false
+    },
+    "adaptive_stats": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mean": 172.4,
+      "std": 65.49,
+      "sharpness": 175.4,
+      "clipped_frac": 0.008,
+      "saturation": 13.6,
+      "blank": false
+    }
+  },
+  "hand": {
+    "baseline_seconds": 5.29,
+    "adaptive_seconds": 5.31,
+    "baseline_stats": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mean": 149.37,
+      "std": 53.67,
+      "sharpness": 71.4,
+      "clipped_frac": 0.0023,
+      "saturation": 53.4,
+      "blank": false
+    },
+    "adaptive_stats": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mean": 189.93,
+      "std": 40.82,
+      "sharpness": 95.3,
+      "clipped_frac": 0.0011,
+      "saturation": 33.4,
+      "blank": false
+    }
+  },
+  "portrait": {
+    "adaptive_seconds": 5.31,
+    "adaptive_stats": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mean": 149.63,
+      "std": 72.63,
+      "sharpness": 36.3,
+      "clipped_frac": 0.0016,
+      "saturation": 39.4,
+      "blank": false
+    }
+  },
+  "verdicts": {
+    "profile_found_blocks": true,
+    "patch_reaches_flux_blocks": true,
+    "distortion_guard": true,
+    "adaptive_consistency_gain": true,
+    "fixed_consistency_gain": true
+  },
+  "notes": "Cross-seed consistency suite deferred: even the fast path is far slower than SDXL; the slow path measured 577s per image.",
+  "consistency_suite": {
+    "timings": {
+      "baseline_s7": 7.98,
+      "fixed_total_s7": 5.37,
+      "adaptive_s7": 5.31,
+      "baseline_s8": 5.23,
+      "fixed_total_s8": 5.31,
+      "adaptive_s8": 5.27,
+      "baseline_s9": 5.26,
+      "fixed_total_s9": 5.34,
+      "adaptive_s9": 5.3
+    },
+    "baseline": 73.496,
+    "fixed_total": 68.478,
+    "adaptive": 68.535,
+    "ratio_fixed_over_baseline": 0.932,
+    "ratio_adaptive_over_baseline": 0.932
+  },
+  "text_probe": {
+    "prompt": "a ceramic sign on a wall with the text \"QUIET ROOM\" written on it",
+    "baseline_seconds": 7.94,
+    "adaptive_seconds": 5.19,
+    "baseline_spelling": "QUIET ROOM correct",
+    "adaptive_spelling": "QUIET ROOM correct"
+  },
+  "visual_inspection": {
+    "hand_baseline": "five digits, correct count - first model family to pass the hand probe",
+    "hand_adaptive": "four digits (one finger missing) at strength 0.0166 - patch degraded hand count",
+    "sign_adaptive": "easel whiteboard, layout steered strongly (cross-patch L2 37.2), glyphs katakana-like",
+    "portrait_adaptive": "clean face, no distortion, stylised makeup",
+    "text_baseline": "QUIET ROOM spelled correctly",
+    "text_adaptive": "QUIET ROOM spelled correctly, patch preserved text accuracy"
+  }
+}

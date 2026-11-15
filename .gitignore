@@ -1,0 +1,11 @@
+# Generated media and run artifacts stay local (reports/*.json evidence is kept)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.mp4
+*.mov
+*.log
+__pycache__/
+*.pyc
+.venv/

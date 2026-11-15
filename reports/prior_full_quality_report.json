@@ -1,0 +1,542 @@
+{
+  "protocol": "valhalla-media-full-quality-v1",
+  "health": {
+    "native": {
+      "protocol": "valhalla-base-v1",
+      "decode_path": "valhalla_base/native/query_frag/k1/ids=seg_0/natural/triad_memory+hub_routing+pipeline_v4+open_fate+stem_span/multihop_fate_entity",
+      "fingerprint": "d07c3e48cbbe75ab",
+      "seconds": 0.24,
+      "ok": true
+    },
+    "lm_patch": {
+      "answer": "The passphrase is Qingniao.",
+      "decode_path": "valhalla_base/lm_patch/patch_pipeline_v4_open/gen",
+      "seconds": 4.9,
+      "fact_held": true,
+      "ok": true
+    },
+    "patches": {
+      "hub": {
+        "dim": 256,
+        "fragments": 0,
+        "body_source": "hub",
+        "tile_count": 0,
+        "stem_cell_count": 0,
+        "tile_signatures": 0,
+        "stem_signatures": 0,
+        "quad_layer_scales": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hub_prefs": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "norm": 0.9999999999999999,
+        "head": [
+          0.3536,
+          0.3536,
+          0.3536,
+          0.3536,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "tile": {
+        "dim": 256,
+        "fragments": 0,
+        "body_source": "tile",
+        "tile_count": 20,
+        "stem_cell_count": 0,
+        "tile_signatures": 20,
+        "stem_signatures": 0,
+        "quad_layer_scales": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hub_prefs": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "norm": 1.0,
+        "head": [
+          0.0707,
+          0.0707,
+          0.0707,
+          0.0707,
+          0.0707,
+          0.0707,
+          0.0707,
+          0.0707
+        ]
+      },
+      "stemcell": {
+        "dim": 256,
+        "fragments": 0,
+        "body_source": "stemcell",
+        "tile_count": 0,
+        "stem_cell_count": 116,
+        "tile_signatures": 0,
+        "stem_signatures": 10,
+        "quad_layer_scales": [
+          1.0120317228950286,
+          1.0120317228950286,
+          1.0120317228950286,
+          1.0120317228950286
+        ],
+        "hub_prefs": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "norm": 1.0,
+        "head": [
+          0.1029,
+          0.1029,
+          0.1029,
+          0.1029,
+          0.1029,
+          0.1029,
+          0.1029,
+          0.1029
+        ]
+      },
+      "triad": {
+        "dim": 256,
+        "fragments": 0,
+        "body_source": "triad",
+        "tile_count": 20,
+        "stem_cell_count": 116,
+        "tile_signatures": 20,
+        "stem_signatures": 10,
+        "quad_layer_scales": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "hub_prefs": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "norm": 1.0,
+        "head": [
+          0.1203,
+          0.1203,
+          0.1203,
+          0.1203,
+          0.0902,
+          0.0902,
+          0.0902,
+          0.0902
+        ]
+      }
+    },
+    "patches_ok": true
+  },
+  "image": {
+    "timings": [
+      {
+        "name": "cons_base_s7",
+        "seconds": 0.79
+      },
+      {
+        "name": "cons_triad_s7",
+        "seconds": 0.95
+      },
+      {
+        "name": "cons_base_s8",
+        "seconds": 0.39
+      },
+      {
+        "name": "cons_triad_s8",
+        "seconds": 0.7
+      },
+      {
+        "name": "cons_base_s9",
+        "seconds": 0.39
+      },
+      {
+        "name": "cons_triad_s9",
+        "seconds": 0.71
+      },
+      {
+        "name": "acc_cube_base",
+        "seconds": 0.41
+      },
+      {
+        "name": "acc_cube_triad",
+        "seconds": 0.7
+      },
+      {
+        "name": "acc_cat_base",
+        "seconds": 0.42
+      },
+      {
+        "name": "acc_cat_triad",
+        "seconds": 0.89
+      },
+      {
+        "name": "acc_sign_base",
+        "seconds": 0.5
+      },
+      {
+        "name": "acc_sign_triad",
+        "seconds": 0.87
+      },
+      {
+        "name": "acc_portrait_base",
+        "seconds": 0.37
+      },
+      {
+        "name": "acc_portrait_triad",
+        "seconds": 0.67
+      },
+      {
+        "name": "acc_hand_base",
+        "seconds": 0.36
+      },
+      {
+        "name": "acc_hand_triad",
+        "seconds": 0.65
+      }
+    ],
+    "peak_gpu_gb": 8.24,
+    "consistency": {
+      "baseline_pairwise_l2": 45.745,
+      "triad_total_pairwise_l2": 40.332,
+      "ratio_triad_over_baseline": 0.882,
+      "patch_more_consistent": true
+    },
+    "accuracy": {
+      "cube": {
+        "prompt": "a red cube on a blue table, studio photo",
+        "baseline": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_cube_base.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 136.43,
+          "std": 50.96,
+          "sharpness": 31.0,
+          "clipped_frac": 0.0005,
+          "saturation": 133.5,
+          "blank": false,
+          "colours": {
+            "red": 0.1403,
+            "orange": 0.0002,
+            "green": 0.0,
+            "blue": 0.8554
+          }
+        },
+        "triad_total": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_cube_triad.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 132.85,
+          "std": 53.74,
+          "sharpness": 35.2,
+          "clipped_frac": 0.0001,
+          "saturation": 147.3,
+          "blank": false,
+          "colours": {
+            "red": 0.1265,
+            "orange": 0.0005,
+            "green": 0.0,
+            "blue": 0.87
+          }
+        }
+      },
+      "cat": {
+        "prompt": "an orange cat sitting on green grass",
+        "baseline": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_cat_base.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 99.54,
+          "std": 65.74,
+          "sharpness": 401.8,
+          "clipped_frac": 0.1119,
+          "saturation": 199.8,
+          "blank": false,
+          "colours": {
+            "red": 0.0006,
+            "orange": 0.1814,
+            "green": 0.7031,
+            "blue": 0.0042
+          }
+        },
+        "triad_total": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_cat_triad.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 97.21,
+          "std": 63.59,
+          "sharpness": 390.6,
+          "clipped_frac": 0.1064,
+          "saturation": 196.2,
+          "blank": false,
+          "colours": {
+            "red": 0.0006,
+            "orange": 0.1685,
+            "green": 0.6961,
+            "blue": 0.0043
+          }
+        }
+      },
+      "sign": {
+        "prompt": "a square ceramic sign standing in a quiet room",
+        "baseline": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_sign_base.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 153.09,
+          "std": 38.99,
+          "sharpness": 144.8,
+          "clipped_frac": 0.0014,
+          "saturation": 75.4,
+          "blank": false
+        },
+        "triad_total": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_sign_triad.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 152.24,
+          "std": 37.93,
+          "sharpness": 181.3,
+          "clipped_frac": 0.0006,
+          "saturation": 67.2,
+          "blank": false
+        }
+      },
+      "portrait": {
+        "prompt": "portrait of a woman smiling, studio light, facing camera",
+        "baseline": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_portrait_base.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 182.48,
+          "std": 66.94,
+          "sharpness": 201.2,
+          "clipped_frac": 0.0001,
+          "saturation": 57.7,
+          "blank": false
+        },
+        "triad_total": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_portrait_triad.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 178.57,
+          "std": 67.08,
+          "sharpness": 188.0,
+          "clipped_frac": 0.0,
+          "saturation": 56.6,
+          "blank": false
+        }
+      },
+      "hand": {
+        "prompt": "a human hand with five fingers, palm facing the camera",
+        "baseline": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_hand_base.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 193.92,
+          "std": 55.54,
+          "sharpness": 104.1,
+          "clipped_frac": 0.0101,
+          "saturation": 52.3,
+          "blank": false
+        },
+        "triad_total": {
+          "path": "C:\\Ai\\Valhalla-main\\reports\\media_pipeline\\full_quality\\acc_hand_triad.png",
+          "size": [
+            512,
+            512
+          ],
+          "mean": 192.8,
+          "std": 50.81,
+          "sharpness": 107.1,
+          "clipped_frac": 0.0071,
+          "saturation": 48.0,
+          "blank": false
+        }
+      }
+    },
+    "distortion": {
+      "blank_any": false,
+      "max_clipped_frac": 0.1119,
+      "min_sharpness": 31.0
+    }
+  },
+  "video": {
+    "timings": [
+      {
+        "name": "baseline",
+        "seconds": 14.26
+      },
+      {
+        "name": "triad_total",
+        "seconds": 14.84
+      }
+    ],
+    "peak_gpu_gb": 12.35,
+    "clips": {
+      "baseline": {
+        "frames": 9,
+        "frame_std_min": 24.52,
+        "blank_frames": 0,
+        "brightness_flicker_std": 0.05,
+        "adjacent_mean_abs": 0.044,
+        "first_last_mean_abs": 0.221
+      },
+      "triad_total": {
+        "frames": 9,
+        "frame_std_min": 40.57,
+        "blank_frames": 0,
+        "brightness_flicker_std": 0.06,
+        "adjacent_mean_abs": 0.116,
+        "first_last_mean_abs": 0.525
+      }
+    },
+    "prompt": "a square ceramic sign in a quiet room, slow steady camera",
+    "steps": 25,
+    "temporal_stability": {
+      "baseline_adjacent_mean_abs": 0.044,
+      "triad_adjacent_mean_abs": 0.116,
+      "triad_first_last_mean_abs": 0.525
+    }
+  },
+  "performance": {
+    "image_hook_overhead_ratio": 0.691,
+    "image_peak_gpu_gb": 8.24,
+    "video_peak_gpu_gb": 12.35,
+    "image_timings": [
+      {
+        "name": "cons_base_s7",
+        "seconds": 0.79
+      },
+      {
+        "name": "cons_triad_s7",
+        "seconds": 0.95
+      },
+      {
+        "name": "cons_base_s8",
+        "seconds": 0.39
+      },
+      {
+        "name": "cons_triad_s8",
+        "seconds": 0.7
+      },
+      {
+        "name": "cons_base_s9",
+        "seconds": 0.39
+      },
+      {
+        "name": "cons_triad_s9",
+        "seconds": 0.71
+      },
+      {
+        "name": "acc_cube_base",
+        "seconds": 0.41
+      },
+      {
+        "name": "acc_cube_triad",
+        "seconds": 0.7
+      },
+      {
+        "name": "acc_cat_base",
+        "seconds": 0.42
+      },
+      {
+        "name": "acc_cat_triad",
+        "seconds": 0.89
+      },
+      {
+        "name": "acc_sign_base",
+        "seconds": 0.5
+      },
+      {
+        "name": "acc_sign_triad",
+        "seconds": 0.87
+      },
+      {
+        "name": "acc_portrait_base",
+        "seconds": 0.37
+      },
+      {
+        "name": "acc_portrait_triad",
+        "seconds": 0.67
+      },
+      {
+        "name": "acc_hand_base",
+        "seconds": 0.36
+      },
+      {
+        "name": "acc_hand_triad",
+        "seconds": 0.65
+      }
+    ],
+    "video_timings": [
+      {
+        "name": "baseline",
+        "seconds": 14.26
+      },
+      {
+        "name": "triad_total",
+        "seconds": 14.84
+      }
+    ]
+  },
+  "verdicts": {
+    "health": true,
+    "consistency_image": true,
+    "consistency_video": true,
+    "accuracy_colour": true,
+    "distortion_guard": true,
+    "performance": false,
+    "distortion_visual": false,
+    "notes": "hand prompt has extra digit in both arms; sign text garbles on some seeds; faces/cat/cube clean"
+  },
+  "visual_inspection": {
+    "cube_baseline": "red cube present, background teal; transparent stand replaces blue table (partial)",
+    "cube_triad": "same geometry as baseline, colours held",
+    "cat_triad": "orange cat on green grass, anatomy clean, no distortion",
+    "portrait_triad": "face symmetric, teeth and eyes clean, no distortion",
+    "sign_triad_seed7": "QUIET ROOM spelled correctly",
+    "sign_triad_seed8": "extra garbled third line under QUIET ROOM (text distortion across seeds)",
+    "hand_baseline": "six digits (extra finger) - classic hand distortion",
+    "hand_triad": "six digits (extra finger) - patch keeps the same distortion level as baseline",
+    "video_triad_frame": "framed plaque on wall, geometry stable across frames, text absent",
+    "video_baseline_frame": "plain wall plate with X mark, static across frames"
+  }
+}

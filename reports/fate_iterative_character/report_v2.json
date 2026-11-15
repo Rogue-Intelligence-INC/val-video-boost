@@ -1,0 +1,282 @@
+{
+  "protocol": "val-video-boost-fate-reingest-v2",
+  "arms": {
+    "fate_reingest": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "seconds": 3.9,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 3.47,
+          "face_found": true,
+          "face_l2_to_seg0": 46.801
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 3.81,
+          "face_found": true,
+          "face_l2_to_seg0": 50.411
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "seconds": 3.72,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 3.68,
+          "face_found": true,
+          "face_l2_to_seg0": 44.873
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 3.75,
+          "face_found": true,
+          "face_l2_to_seg0": 49.89
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "seconds": 3.7,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 3.72,
+          "face_found": true,
+          "face_l2_to_seg0": 41.212
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 3.64,
+          "face_found": true,
+          "face_l2_to_seg0": 36.375
+        }
+      ],
+      "patch_drift": [
+        {
+          "seed": 7,
+          "seg": 0,
+          "cos_to_anchor": 1.0,
+          "session_fragments": 3
+        },
+        {
+          "seed": 7,
+          "seg": 1,
+          "cos_to_anchor": 0.9888,
+          "session_fragments": 3
+        },
+        {
+          "seed": 7,
+          "seg": 2,
+          "cos_to_anchor": 0.9922,
+          "session_fragments": 3
+        },
+        {
+          "seed": 8,
+          "seg": 0,
+          "cos_to_anchor": 1.0,
+          "session_fragments": 3
+        },
+        {
+          "seed": 8,
+          "seg": 1,
+          "cos_to_anchor": 0.9888,
+          "session_fragments": 3
+        },
+        {
+          "seed": 8,
+          "seg": 2,
+          "cos_to_anchor": 0.9922,
+          "session_fragments": 3
+        },
+        {
+          "seed": 9,
+          "seg": 0,
+          "cos_to_anchor": 1.0,
+          "session_fragments": 3
+        },
+        {
+          "seed": 9,
+          "seg": 1,
+          "cos_to_anchor": 0.9888,
+          "session_fragments": 3
+        },
+        {
+          "seed": 9,
+          "seg": 2,
+          "cos_to_anchor": 0.9922,
+          "session_fragments": 3
+        }
+      ],
+      "cross_segment_face_l2_mean": 44.927,
+      "cross_segment_face_l2_all": [
+        46.801,
+        50.411,
+        44.873,
+        49.89,
+        41.212,
+        36.375
+      ]
+    },
+    "scene_only": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "seconds": 3.62,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 3.6,
+          "face_found": true,
+          "face_l2_to_seg0": 45.989
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 3.8,
+          "face_found": true,
+          "face_l2_to_seg0": 50.512
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "seconds": 3.66,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 3.79,
+          "face_found": true,
+          "face_l2_to_seg0": 44.571
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 3.69,
+          "face_found": true,
+          "face_l2_to_seg0": 50.175
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "seconds": 3.65,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 3.79,
+          "face_found": true,
+          "face_l2_to_seg0": 41.597
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 4.12,
+          "face_found": true,
+          "face_l2_to_seg0": 38.164
+        }
+      ],
+      "patch_drift": [
+        {
+          "seed": 7,
+          "seg": 0,
+          "cos_to_anchor": 1.0,
+          "session_fragments": 3
+        },
+        {
+          "seed": 7,
+          "seg": 1,
+          "cos_to_anchor": 0.9891,
+          "session_fragments": 3
+        },
+        {
+          "seed": 7,
+          "seg": 2,
+          "cos_to_anchor": 0.998,
+          "session_fragments": 3
+        },
+        {
+          "seed": 8,
+          "seg": 0,
+          "cos_to_anchor": 1.0,
+          "session_fragments": 3
+        },
+        {
+          "seed": 8,
+          "seg": 1,
+          "cos_to_anchor": 0.9891,
+          "session_fragments": 3
+        },
+        {
+          "seed": 8,
+          "seg": 2,
+          "cos_to_anchor": 0.998,
+          "session_fragments": 3
+        },
+        {
+          "seed": 9,
+          "seg": 0,
+          "cos_to_anchor": 1.0,
+          "session_fragments": 3
+        },
+        {
+          "seed": 9,
+          "seg": 1,
+          "cos_to_anchor": 0.9891,
+          "session_fragments": 3
+        },
+        {
+          "seed": 9,
+          "seg": 2,
+          "cos_to_anchor": 0.998,
+          "session_fragments": 3
+        }
+      ],
+      "cross_segment_face_l2_mean": 45.168,
+      "cross_segment_face_l2_all": [
+        45.989,
+        50.512,
+        44.571,
+        50.175,
+        41.597,
+        38.164
+      ]
+    }
+  },
+  "combined_cross_segment_face_l2": {
+    "baseline": 47.179,
+    "static_triad": 42.931,
+    "fate_session_frozen_v1": 44.677,
+    "fate_reingest": 44.927,
+    "scene_only": 45.168
+  },
+  "verdicts": {
+    "reingest_beats_static_triad": false,
+    "reingest_beats_scene_only": true,
+    "reingest_patch_actually_moves": true,
+    "all_patch_arms_beat_baseline": true
+  }
+}

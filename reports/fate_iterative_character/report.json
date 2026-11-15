@@ -1,0 +1,562 @@
+{
+  "protocol": "val-video-boost-fate-iterative-v1",
+  "model": "RunDiffusion/Juggernaut-XL-v9",
+  "seeds": [
+    7,
+    8,
+    9
+  ],
+  "scenes": [
+    "studio",
+    "park",
+    "harbour"
+  ],
+  "arms": {
+    "baseline": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s7_studio.png",
+          "seconds": 2.82,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s7_park.png",
+          "seconds": 2.21,
+          "face_found": true,
+          "face_l2_to_seg0": 50.876
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s7_harbour.png",
+          "seconds": 2.19,
+          "face_found": true,
+          "face_l2_to_seg0": 51.896
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s8_studio.png",
+          "seconds": 2.2,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s8_park.png",
+          "seconds": 2.2,
+          "face_found": true,
+          "face_l2_to_seg0": 40.907
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s8_harbour.png",
+          "seconds": 2.14,
+          "face_found": true,
+          "face_l2_to_seg0": 43.177
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s9_studio.png",
+          "seconds": 2.15,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s9_park.png",
+          "seconds": 2.13,
+          "face_found": true,
+          "face_l2_to_seg0": 49.446
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\s9_harbour.png",
+          "seconds": 2.2,
+          "face_found": true,
+          "face_l2_to_seg0": 46.774
+        }
+      ],
+      "patch_drift": [],
+      "negative": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\baseline\\idB_studio_s7.png"
+    },
+    "static_triad": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s7_studio.png",
+          "seconds": 3.37,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s7_park.png",
+          "seconds": 3.36,
+          "face_found": true,
+          "face_l2_to_seg0": 44.938
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s7_harbour.png",
+          "seconds": 3.33,
+          "face_found": true,
+          "face_l2_to_seg0": 50.089
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s8_studio.png",
+          "seconds": 3.36,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s8_park.png",
+          "seconds": 3.32,
+          "face_found": true,
+          "face_l2_to_seg0": 40.999
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s8_harbour.png",
+          "seconds": 3.33,
+          "face_found": true,
+          "face_l2_to_seg0": 45.494
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s9_studio.png",
+          "seconds": 3.36,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s9_park.png",
+          "seconds": 3.41,
+          "face_found": true,
+          "face_l2_to_seg0": 40.667
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s9_harbour.png",
+          "seconds": 3.42,
+          "face_found": true,
+          "face_l2_to_seg0": 35.396
+        }
+      ],
+      "patch_drift": [],
+      "negative": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\idB_studio_s7.png"
+    },
+    "fate_iterative": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s7_studio.png",
+          "seconds": 3.39,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s7_park.png",
+          "seconds": 3.41,
+          "face_found": true,
+          "face_l2_to_seg0": 47.127
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s7_harbour.png",
+          "seconds": 3.37,
+          "face_found": true,
+          "face_l2_to_seg0": 50.763
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s8_studio.png",
+          "seconds": 3.38,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s8_park.png",
+          "seconds": 3.49,
+          "face_found": true,
+          "face_l2_to_seg0": 43.263
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s8_harbour.png",
+          "seconds": 3.65,
+          "face_found": true,
+          "face_l2_to_seg0": 49.669
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s9_studio.png",
+          "seconds": 3.76,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s9_park.png",
+          "seconds": 3.46,
+          "face_found": true,
+          "face_l2_to_seg0": 40.79
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\s9_harbour.png",
+          "seconds": 3.53,
+          "face_found": true,
+          "face_l2_to_seg0": 36.452
+        }
+      ],
+      "patch_drift": [
+        {
+          "seed": 7,
+          "seg": 0,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 7,
+          "seg": 1,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 7,
+          "seg": 2,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 8,
+          "seg": 0,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 8,
+          "seg": 1,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 8,
+          "seg": 2,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 9,
+          "seg": 0,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 9,
+          "seg": 1,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 9,
+          "seg": 2,
+          "cos_to_anchor": 1.0
+        }
+      ],
+      "negative": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_iterative\\idB_studio_s7.png"
+    },
+    "fate_reset": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s7_studio.png",
+          "seconds": 3.62,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 7,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s7_park.png",
+          "seconds": 3.55,
+          "face_found": true,
+          "face_l2_to_seg0": 47.127
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s7_harbour.png",
+          "seconds": 3.65,
+          "face_found": true,
+          "face_l2_to_seg0": 50.763
+        },
+        {
+          "seed": 8,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s8_studio.png",
+          "seconds": 3.56,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s8_park.png",
+          "seconds": 3.5,
+          "face_found": true,
+          "face_l2_to_seg0": 43.263
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s8_harbour.png",
+          "seconds": 3.69,
+          "face_found": true,
+          "face_l2_to_seg0": 49.669
+        },
+        {
+          "seed": 9,
+          "scene": "studio",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s9_studio.png",
+          "seconds": 4.13,
+          "face_found": true,
+          "face_l2_to_seg0": null
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s9_park.png",
+          "seconds": 4.77,
+          "face_found": true,
+          "face_l2_to_seg0": 40.79
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\s9_harbour.png",
+          "seconds": 5.27,
+          "face_found": true,
+          "face_l2_to_seg0": 36.452
+        }
+      ],
+      "patch_drift": [
+        {
+          "seed": 7,
+          "seg": 0,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 7,
+          "seg": 1,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 7,
+          "seg": 2,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 8,
+          "seg": 0,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 8,
+          "seg": 1,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 8,
+          "seg": 2,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 9,
+          "seg": 0,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 9,
+          "seg": 1,
+          "cos_to_anchor": 1.0
+        },
+        {
+          "seed": 9,
+          "seg": 2,
+          "cos_to_anchor": 1.0
+        }
+      ],
+      "negative": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\fate_reset\\idB_studio_s7.png"
+    }
+  },
+  "summary": {
+    "baseline": {
+      "cross_segment_face_l2_mean": 47.179,
+      "cross_segment_face_l2_all": [
+        50.876,
+        51.896,
+        40.907,
+        43.177,
+        49.446,
+        46.774
+      ],
+      "faces_found": 9,
+      "different_person_face_l2_mean": 55.198
+    },
+    "static_triad": {
+      "cross_segment_face_l2_mean": 42.931,
+      "cross_segment_face_l2_all": [
+        44.938,
+        50.089,
+        40.999,
+        45.494,
+        40.667,
+        35.396
+      ],
+      "faces_found": 9,
+      "different_person_face_l2_mean": 56.051
+    },
+    "fate_iterative": {
+      "cross_segment_face_l2_mean": 44.677,
+      "cross_segment_face_l2_all": [
+        47.127,
+        50.763,
+        43.263,
+        49.669,
+        40.79,
+        36.452
+      ],
+      "faces_found": 9,
+      "different_person_face_l2_mean": 56.317
+    },
+    "fate_reset": {
+      "cross_segment_face_l2_mean": 44.677,
+      "cross_segment_face_l2_all": [
+        47.127,
+        50.763,
+        43.263,
+        49.669,
+        40.79,
+        36.452
+      ],
+      "faces_found": 9,
+      "different_person_face_l2_mean": 56.317
+    }
+  },
+  "chains_log": {
+    "fate_iterative": [
+      [
+        {
+          "tag": "start_identity",
+          "corpus_lines": 5,
+          "lines_ingested": 5,
+          "fragments_total": 3,
+          "fragments_new": 3,
+          "fragments_seen": 3
+        },
+        {
+          "tag": "s7_seg1",
+          "corpus_lines": 7,
+          "lines_ingested": 7,
+          "fragments_total": 3,
+          "fragments_new": 0,
+          "fragments_seen": 3
+        },
+        {
+          "tag": "s7_seg2",
+          "corpus_lines": 9,
+          "lines_ingested": 9,
+          "fragments_total": 3,
+          "fragments_new": 0,
+          "fragments_seen": 3
+        }
+      ],
+      [
+        {
+          "tag": "start_identity",
+          "corpus_lines": 5,
+          "lines_ingested": 5,
+          "fragments_total": 3,
+          "fragments_new": 3,
+          "fragments_seen": 3
+        },
+        {
+          "tag": "s8_seg1",
+          "corpus_lines": 7,
+          "lines_ingested": 7,
+          "fragments_total": 3,
+          "fragments_new": 0,
+          "fragments_seen": 3
+        },
+        {
+          "tag": "s8_seg2",
+          "corpus_lines": 9,
+          "lines_ingested": 9,
+          "fragments_total": 3,
+          "fragments_new": 0,
+          "fragments_seen": 3
+        }
+      ],
+      [
+        {
+          "tag": "start_identity",
+          "corpus_lines": 5,
+          "lines_ingested": 5,
+          "fragments_total": 3,
+          "fragments_new": 3,
+          "fragments_seen": 3
+        },
+        {
+          "tag": "s9_seg1",
+          "corpus_lines": 7,
+          "lines_ingested": 7,
+          "fragments_total": 3,
+          "fragments_new": 0,
+          "fragments_seen": 3
+        },
+        {
+          "tag": "s9_seg2",
+          "corpus_lines": 9,
+          "lines_ingested": 9,
+          "fragments_total": 3,
+          "fragments_new": 0,
+          "fragments_seen": 3
+        }
+      ]
+    ]
+  },
+  "verdicts": {
+    "patch_beats_baseline_static_triad": true,
+    "patch_beats_baseline_fate_iterative": true,
+    "patch_beats_baseline_fate_reset": true,
+    "iteration_beats_reset": false
+  }
+}

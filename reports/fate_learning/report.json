@@ -1,0 +1,572 @@
+{
+  "protocol": "val-video-boost-fate-learning-v1",
+  "rounds": 8,
+  "base_lines": 126,
+  "arms": {
+    "learn": {
+      "rounds": [
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 79,
+            "grasped_text": "Filler note 73: Old Lena waits at the salt market.",
+            "margin": 0.0277,
+            "target_rank": null,
+            "affinity_max": 0.6194867609034119,
+            "decision": "abstain"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 5,
+            "grasped_text": "Maria is a 28-year-old woman with chestnut brown hair and blue eyes.",
+            "margin": 0.0286,
+            "target_rank": null,
+            "affinity_max": 0.6559565771379516,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0062,
+            "target_rank": null,
+            "affinity_max": 0.6659698858508769,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6937925262297113,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.5473,
+            "target_rank": null,
+            "affinity_max": 0.7380972126718228,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343006040098,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6938699622839234,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.4346,
+            "target_rank": null,
+            "affinity_max": 0.7380960456182882,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343186359949,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6938699622898802,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.4346,
+            "target_rank": null,
+            "affinity_max": 0.7380960456181984,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343186359962,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6938699622898802,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.4346,
+            "target_rank": null,
+            "affinity_max": 0.7380960456181984,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343186359962,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6938699622898802,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.4346,
+            "target_rank": null,
+            "affinity_max": 0.7380960456181984,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343186359962,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6938699622898802,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.4346,
+            "target_rank": null,
+            "affinity_max": 0.7380960456181984,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343186359962,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.2326,
+            "target_rank": 0,
+            "affinity_max": 0.6938699622898802,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.4346,
+            "target_rank": null,
+            "affinity_max": 0.7380960456181984,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.8146,
+            "target_rank": 0,
+            "affinity_max": 0.8462343186359962,
+            "decision": "emit"
+          }
+        }
+      ],
+      "first": {
+        "accuracy": 0.0,
+        "mean_margin": 0.0208,
+        "mean_target_rank": 0.0
+      },
+      "last": {
+        "accuracy": 0.667,
+        "mean_margin": 1.8273,
+        "mean_target_rank": 0.0
+      },
+      "all": {
+        "accuracy": 0.583,
+        "mean_margin": 1.6062,
+        "mean_target_rank": 0.0
+      },
+      "affinity_trace": [
+        0.6659698858508769,
+        0.8462343006040098,
+        0.8462343186359949,
+        0.8462343186359962,
+        0.8462343186359962,
+        0.8462343186359962,
+        0.8462343186359962,
+        0.8462343186359962
+      ]
+    },
+    "control": {
+      "rounds": [
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 79,
+            "grasped_text": "Filler note 73: Old Lena waits at the salt market.",
+            "margin": 0.0277,
+            "target_rank": null,
+            "affinity_max": 0.6194867609034119,
+            "decision": "abstain"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 5,
+            "grasped_text": "Maria is a 28-year-old woman with chestnut brown hair and blue eyes.",
+            "margin": 0.0286,
+            "target_rank": null,
+            "affinity_max": 0.6559565771379516,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0062,
+            "target_rank": null,
+            "affinity_max": 0.6659698858508769,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 79,
+            "grasped_text": "Filler note 73: Old Lena waits at the salt market.",
+            "margin": 0.0187,
+            "target_rank": null,
+            "affinity_max": 0.6358417205602634,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 5,
+            "grasped_text": "Maria is a 28-year-old woman with chestnut brown hair and blue eyes.",
+            "margin": 0.0286,
+            "target_rank": null,
+            "affinity_max": 0.6555987976998356,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0062,
+            "target_rank": null,
+            "affinity_max": 0.6658218921922934,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 79,
+            "grasped_text": "Filler note 73: Old Lena waits at the salt market.",
+            "margin": 0.0187,
+            "target_rank": null,
+            "affinity_max": 0.6358426232660648,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 0,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.1114,
+            "target_rank": null,
+            "affinity_max": 0.724036482770299,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0062,
+            "target_rank": null,
+            "affinity_max": 0.6637265253522122,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 79,
+            "grasped_text": "Filler note 73: Old Lena waits at the salt market.",
+            "margin": 0.0187,
+            "target_rank": null,
+            "affinity_max": 0.6358431306917829,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 0,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.1114,
+            "target_rank": null,
+            "affinity_max": 0.7240503663037838,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0062,
+            "target_rank": null,
+            "affinity_max": 0.6635874930060531,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 85,
+            "grasped_text": "Filler note 79: Old Lena waits at the salt market.",
+            "margin": 0.0155,
+            "target_rank": null,
+            "affinity_max": 0.6358439706233612,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 0,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.1175,
+            "target_rank": null,
+            "affinity_max": 0.7240634184039534,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0025,
+            "target_rank": null,
+            "affinity_max": 0.6634536308301242,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 85,
+            "grasped_text": "Filler note 79: Old Lena waits at the salt market.",
+            "margin": 0.0155,
+            "target_rank": null,
+            "affinity_max": 0.6358447820998948,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 0,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.1175,
+            "target_rank": null,
+            "affinity_max": 0.7240756759779741,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0025,
+            "target_rank": null,
+            "affinity_max": 0.6633243403028085,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 85,
+            "grasped_text": "Filler note 79: Old Lena waits at the salt market.",
+            "margin": 0.0155,
+            "target_rank": null,
+            "affinity_max": 0.6358455687958859,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 0,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.1175,
+            "target_rank": null,
+            "affinity_max": 0.7240872203811615,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0025,
+            "target_rank": null,
+            "affinity_max": 0.6631996261276859,
+            "decision": "emit"
+          }
+        },
+        {
+          "hair": {
+            "correct": false,
+            "grasped_idx": 85,
+            "grasped_text": "Filler note 79: Old Lena waits at the salt market.",
+            "margin": 0.0155,
+            "target_rank": null,
+            "affinity_max": 0.6358463301883064,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 0,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.1175,
+            "target_rank": null,
+            "affinity_max": 0.7240981072850418,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": false,
+            "grasped_idx": 97,
+            "grasped_text": "Filler note 91: Old Lena waits at the salt market.",
+            "margin": 0.0025,
+            "target_rank": null,
+            "affinity_max": 0.6630790616280764,
+            "decision": "emit"
+          }
+        }
+      ],
+      "first": {
+        "accuracy": 0.0,
+        "mean_margin": 0.0208,
+        "mean_target_rank": 0.0
+      },
+      "last": {
+        "accuracy": 0.0,
+        "mean_margin": 0.0452,
+        "mean_target_rank": 0.0
+      },
+      "all": {
+        "accuracy": 0.0,
+        "mean_margin": 0.0388,
+        "mean_target_rank": 0.0
+      },
+      "affinity_trace": [
+        0.6659698858508769,
+        0.6658218921922934,
+        0.724036482770299,
+        0.7240503663037838,
+        0.7240634184039534,
+        0.7240756759779741,
+        0.7240872203811615,
+        0.7240981072850418
+      ]
+    },
+    "bulk": {
+      "rounds": [
+        {
+          "hair": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.9856,
+            "target_rank": 0,
+            "affinity_max": 0.6873843310221034,
+            "decision": "emit"
+          },
+          "mole": {
+            "correct": false,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 0.5473,
+            "target_rank": null,
+            "affinity_max": 0.7381937316973786,
+            "decision": "emit"
+          },
+          "age": {
+            "correct": true,
+            "grasped_idx": 126,
+            "grasped_text": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "margin": 2.9613,
+            "target_rank": 0,
+            "affinity_max": 0.8462327593301792,
+            "decision": "emit"
+          }
+        }
+      ],
+      "only": {
+        "accuracy": 0.667,
+        "mean_margin": 1.4981,
+        "mean_target_rank": 0.0
+      }
+    }
+  },
+  "verdicts": {
+    "learn_improves_over_rounds": true,
+    "learn_beats_control_last": true,
+    "incremental_beats_bulk": true
+  }
+}

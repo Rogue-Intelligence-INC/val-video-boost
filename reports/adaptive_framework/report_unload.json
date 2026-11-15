@@ -1,0 +1,52 @@
+{
+  "protocol": "val-video-boost-unload-strategies-v1",
+  "task_video": "CogVideoX-2b 17f 512x288 10 steps",
+  "task_flux": "FLUX 1024x1024 4 steps",
+  "video": [
+    {
+      "strategy": "resident",
+      "ok": true,
+      "error": null,
+      "frames": 17,
+      "seconds": 193.2,
+      "peak_gpu_gb": 22.47
+    },
+    {
+      "strategy": "cpu_offload",
+      "ok": true,
+      "error": null,
+      "frames": 17,
+      "seconds": 8.7,
+      "peak_gpu_gb": 15.3
+    },
+    {
+      "strategy": "sequential",
+      "ok": true,
+      "error": null,
+      "frames": 17,
+      "seconds": 101.5,
+      "peak_gpu_gb": 7.05
+    }
+  ],
+  "flux": [
+    {
+      "strategy": "group_offload_x1",
+      "ok": true,
+      "error": null,
+      "seconds": 8.5,
+      "peak_gpu_gb": 3.01
+    },
+    {
+      "strategy": "group_offload_x4",
+      "ok": true,
+      "error": null,
+      "seconds": 7.6,
+      "peak_gpu_gb": 2.74
+    }
+  ],
+  "verdicts": {
+    "video_all_strategies_completed": true,
+    "video_fastest": "cpu_offload",
+    "video_lightest": "sequential"
+  }
+}

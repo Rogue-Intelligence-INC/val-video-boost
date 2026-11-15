@@ -1,0 +1,80 @@
+{
+  "protocol": "val-video-boost-fate-reinforce-v3",
+  "cross_segment_face_l2_all": [
+    46.801,
+    50.409,
+    44.873,
+    50.147,
+    41.212,
+    38.294
+  ],
+  "patch_drift": [
+    {
+      "seed": 7,
+      "seg": 0,
+      "cos_to_anchor": 1.0,
+      "corpus_lines": 6
+    },
+    {
+      "seed": 7,
+      "seg": 1,
+      "cos_to_anchor": 0.9888,
+      "corpus_lines": 7
+    },
+    {
+      "seed": 7,
+      "seg": 2,
+      "cos_to_anchor": 0.9915,
+      "corpus_lines": 8
+    },
+    {
+      "seed": 8,
+      "seg": 0,
+      "cos_to_anchor": 1.0,
+      "corpus_lines": 6
+    },
+    {
+      "seed": 8,
+      "seg": 1,
+      "cos_to_anchor": 0.9888,
+      "corpus_lines": 7
+    },
+    {
+      "seed": 8,
+      "seg": 2,
+      "cos_to_anchor": 0.9915,
+      "corpus_lines": 8
+    },
+    {
+      "seed": 9,
+      "seg": 0,
+      "cos_to_anchor": 1.0,
+      "corpus_lines": 6
+    },
+    {
+      "seed": 9,
+      "seg": 1,
+      "cos_to_anchor": 0.9888,
+      "corpus_lines": 7
+    },
+    {
+      "seed": 9,
+      "seg": 2,
+      "cos_to_anchor": 0.9915,
+      "corpus_lines": 8
+    }
+  ],
+  "combined_cross_segment_face_l2": {
+    "baseline": 47.179,
+    "static_triad": 42.931,
+    "fate_session_frozen_v1": 44.677,
+    "fate_reingest": 44.927,
+    "scene_only": 45.168,
+    "fate_reinforce_v3": 45.289
+  },
+  "verdicts": {
+    "reinforce_beats_static_triad": false,
+    "reinforce_beats_reingest_v2": false,
+    "reinforce_beats_baseline": true
+  }
+}

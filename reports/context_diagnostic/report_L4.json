@@ -1,0 +1,177 @@
+{
+  "protocol": "context-diagnostic-L4-prompt-channel-v1",
+  "arms": {
+    "short": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 2.49,
+          "arcface_cos": 0.4265
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 2.47,
+          "arcface_cos": 0.4255
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 3.04,
+          "arcface_cos": 0.4964
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 2.56,
+          "arcface_cos": 0.4216
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 2.68,
+          "arcface_cos": 0.5402
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 2.75,
+          "arcface_cos": 0.516
+        }
+      ],
+      "mean_cos": 0.471,
+      "min_cos": 0.4216
+    },
+    "short_neg": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 2.66,
+          "arcface_cos": 0.344
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 2.54,
+          "arcface_cos": 0.3407
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 3.0,
+          "arcface_cos": 0.5056
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 2.61,
+          "arcface_cos": 0.3721
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 2.65,
+          "arcface_cos": 0.4836
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 2.8,
+          "arcface_cos": 0.4669
+        }
+      ],
+      "mean_cos": 0.4188,
+      "min_cos": 0.3407
+    },
+    "detailed": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 2.79,
+          "arcface_cos": 0.608
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 2.9,
+          "arcface_cos": 0.5776
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 2.61,
+          "arcface_cos": 0.5407
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 3.21,
+          "arcface_cos": 0.5408
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 3.06,
+          "arcface_cos": 0.6129
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 3.25,
+          "arcface_cos": 0.6536
+        }
+      ],
+      "mean_cos": 0.5889,
+      "min_cos": 0.5407
+    },
+    "detailed_neg": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 2.96,
+          "arcface_cos": 0.544
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 2.76,
+          "arcface_cos": 0.6054
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 2.91,
+          "arcface_cos": 0.5773
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 2.94,
+          "arcface_cos": 0.6427
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 2.89,
+          "arcface_cos": 0.5895
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 2.71,
+          "arcface_cos": 0.7025
+        }
+      ],
+      "mean_cos": 0.6102,
+      "min_cos": 0.544
+    }
+  },
+  "reference": {
+    "historical_short_baseline": 0.471,
+    "different_person": 0.1522
+  }
+}

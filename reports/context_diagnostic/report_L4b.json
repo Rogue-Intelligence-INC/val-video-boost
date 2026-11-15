@@ -1,0 +1,22 @@
+{
+  "protocol": "context-diagnostic-L4b-cross-person-control-v1",
+  "rows": [
+    {
+      "seed": 7,
+      "cos_A_detailed_vs_Sofia_detailed": 0.466
+    },
+    {
+      "seed": 8,
+      "cos_A_detailed_vs_Sofia_detailed": 0.4092
+    },
+    {
+      "seed": 9,
+      "cos_A_detailed_vs_Sofia_detailed": 0.477
+    }
+  ],
+  "cross_person_detailed_mean": 0.4507,
+  "same_person_detailed_mean_from_L4": 0.5889,
+  "verdicts": {
+    "specificity_real": false
+  }
+}

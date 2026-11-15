@@ -1,0 +1,69 @@
+{
+  "protocol": "context-diagnostic-L1c-session-geometry-v1",
+  "cosine_matrix": {
+    "A_aria": {
+      "A_aria": 1.0,
+      "B_marco": 0.9497,
+      "C_sofia": 0.9556,
+      "D_yuki": 0.9321,
+      "A_detailed": 0.8864,
+      "A_qa": 0.9242
+    },
+    "B_marco": {
+      "A_aria": 0.9497,
+      "B_marco": 1.0,
+      "C_sofia": 0.9636,
+      "D_yuki": 0.9088,
+      "A_detailed": 0.9405,
+      "A_qa": 0.9564
+    },
+    "C_sofia": {
+      "A_aria": 0.9556,
+      "B_marco": 0.9636,
+      "C_sofia": 1.0,
+      "D_yuki": 0.9092,
+      "A_detailed": 0.9162,
+      "A_qa": 0.9489
+    },
+    "D_yuki": {
+      "A_aria": 0.9321,
+      "B_marco": 0.9088,
+      "C_sofia": 0.9092,
+      "D_yuki": 1.0,
+      "A_detailed": 0.8666,
+      "A_qa": 0.9145
+    },
+    "A_detailed": {
+      "A_aria": 0.8864,
+      "B_marco": 0.9405,
+      "C_sofia": 0.9162,
+      "D_yuki": 0.8666,
+      "A_detailed": 1.0,
+      "A_qa": 0.9245
+    },
+    "A_qa": {
+      "A_aria": 0.9242,
+      "B_marco": 0.9564,
+      "C_sofia": 0.9489,
+      "D_yuki": 0.9145,
+      "A_detailed": 0.9245,
+      "A_qa": 1.0
+    }
+  },
+  "inter_identity_mean": 0.9365,
+  "intra_A": {
+    "vs_detailed": 0.8864,
+    "vs_qa": 0.9242
+  },
+  "session_vs_export_same_input": {
+    "A_aria": 0.2214,
+    "B_marco": 0.1404,
+    "C_sofia": 0.127,
+    "D_yuki": 0.1445,
+    "A_detailed": -0.0587,
+    "A_qa": -0.0017
+  },
+  "verdicts": {
+    "session_more_discriminative_than_export": false
+  }
+}

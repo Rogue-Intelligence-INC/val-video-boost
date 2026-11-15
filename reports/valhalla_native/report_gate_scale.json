@@ -1,0 +1,124 @@
+{
+  "protocol": "val-video-boost-gate-scale-v1",
+  "arms": {
+    "ip_gate_uniform_0.30": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "arcface_cos": 0.6067
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "arcface_cos": 0.5579
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "arcface_cos": 0.6273
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "arcface_cos": 0.5163
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "arcface_cos": 0.7308
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "arcface_cos": 0.6803
+        }
+      ],
+      "mean_cos": 0.6199,
+      "min_cos": 0.5163
+    },
+    "ip_gate_uniform_0.45": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "arcface_cos": 0.5263
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "arcface_cos": 0.5637
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "arcface_cos": 0.5887
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "arcface_cos": 0.5131
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "arcface_cos": 0.6609
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "arcface_cos": 0.6403
+        }
+      ],
+      "mean_cos": 0.5822,
+      "min_cos": 0.5131
+    },
+    "ip_gate_block_matched": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "arcface_cos": 0.5324
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "arcface_cos": 0.5571
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "arcface_cos": 0.6079
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "arcface_cos": 0.5508
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "arcface_cos": 0.7564
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "arcface_cos": 0.6884
+        }
+      ],
+      "mean_cos": 0.6155,
+      "min_cos": 0.5324
+    }
+  },
+  "combined": {
+    "fate_face_patch": 0.4552,
+    "arcface_blocks": 0.4525,
+    "ip_gate_uniform": 0.5811,
+    "ip_gate_mid_up": 0.5853,
+    "ip_gate_down_only": 0.4913,
+    "ip_gate_fate_profile": 0.6201,
+    "ip_gate_uniform_0.30": 0.6199,
+    "ip_gate_uniform_0.45": 0.5822,
+    "ip_gate_block_matched": 0.6155
+  }
+}

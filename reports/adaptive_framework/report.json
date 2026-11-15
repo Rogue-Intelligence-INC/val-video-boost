@@ -1,0 +1,297 @@
+{
+  "protocol": "val-video-boost-adaptive-framework-v1",
+  "catalog": [
+    {
+      "name": "CogVideoX-2b",
+      "dir": "C:\\Ai\\models\\CogVideoX-2b",
+      "pipeline_class": "CogVideoXPipeline",
+      "family": "cogvideox",
+      "kb": {
+        "loader": "video_cpu_offload",
+        "patch_modes": [
+          "legacy",
+          "full",
+          "total"
+        ],
+        "ip_adapter_face": false,
+        "resolution_wall": {
+          "max_frames_tested_ok": 121,
+          "collapse_at": 161,
+          "safe_resolution_over_33f": "512x288",
+          "native_resolution": "720x480 (<=33f only, memory thrash above)"
+        },
+        "notes": "T2V only: no last-frame input; cross-window identity needs I2V weights",
+        "source": "reports/single_film/report_limits.json"
+      }
+    },
+    {
+      "name": "flux1-schnell",
+      "dir": "C:\\Ai\\models\\flux1-schnell",
+      "pipeline_class": "FluxPipeline",
+      "family": "flux",
+      "kb": {
+        "loader": "flux_group_offload",
+        "patch_modes": [
+          "legacy",
+          "full",
+          "total"
+        ],
+        "ip_adapter_face": false,
+        "notes": "enable_model_cpu_offload measured 577s/image; group offload ~5s. steps=4, guidance=0",
+        "prior_strength": 0.0166,
+        "source": "reports/prior_flux/report.json"
+      }
+    },
+    {
+      "name": "juggernaut-xl-v9",
+      "dir": "C:\\Ai\\models\\juggernaut-xl-v9",
+      "pipeline_class": "StableDiffusionXLPipeline",
+      "family": "sdxl",
+      "kb": {
+        "loader": "sdxl_full_gpu",
+        "patch_modes": [
+          "legacy",
+          "full",
+          "total"
+        ],
+        "ip_adapter_face": true,
+        "notes": "IP-Adapter Plus Face available (SDXL only)"
+      }
+    },
+    {
+      "name": "sd-turbo",
+      "dir": "C:\\Ai\\models\\sd-turbo",
+      "pipeline_class": "StableDiffusionPipeline",
+      "family": "unknown",
+      "kb": {
+        "loader": "generic",
+        "patch_modes": [
+          "legacy",
+          "full",
+          "total"
+        ],
+        "ip_adapter_face": false
+      }
+    },
+    {
+      "name": "sdxl-base-1.0",
+      "dir": "C:\\Ai\\models\\sdxl-base-1.0",
+      "pipeline_class": "StableDiffusionXLPipeline",
+      "family": "sdxl",
+      "kb": {
+        "loader": "sdxl_full_gpu",
+        "patch_modes": [
+          "legacy",
+          "full",
+          "total"
+        ],
+        "ip_adapter_face": true,
+        "notes": "IP-Adapter Plus Face available (SDXL only)"
+      }
+    },
+    {
+      "name": "sdxl-turbo",
+      "dir": "C:\\Ai\\models\\sdxl-turbo",
+      "pipeline_class": "StableDiffusionXLPipeline",
+      "family": "sdxl",
+      "kb": {
+        "loader": "sdxl_full_gpu",
+        "patch_modes": [
+          "legacy",
+          "full",
+          "total"
+        ],
+        "ip_adapter_face": true,
+        "notes": "IP-Adapter Plus Face available (SDXL only)"
+      }
+    },
+    {
+      "name": "text-to-video-ms-1.7b",
+      "dir": "C:\\Ai\\models\\text-to-video-ms-1.7b",
+      "pipeline_class": "TextToVideoSDPipeline",
+      "family": "text2video_sd",
+      "kb": {
+        "loader": "video_cpu_offload",
+        "patch_modes": [],
+        "ip_adapter_face": false,
+        "notes": "legacy small model, superseded by cogvideox"
+      }
+    }
+  ],
+  "registry": {
+    "juggernaut-xl-v9": [
+      {
+        "task": "character_identity_arcface",
+        "score": 0.5823,
+        "source": "report_ipface.json",
+        "arm": "ip_face_triad",
+        "note": "best measured identity channel"
+      },
+      {
+        "task": "character_identity_arcface_baseline",
+        "score": 0.471,
+        "source": "report_ipface.json"
+      },
+      {
+        "task": "character_identity_gate_tuned",
+        "score": 0.6199,
+        "source": "report_gate_scale.json",
+        "arm": "ip_gate_uniform_0.30",
+        "note": "mid+up gate, total strength 0.30"
+      },
+      {
+        "task": "long_chain_identity_24seg",
+        "score": 0.5516,
+        "source": "extreme/report.json",
+        "min": 0.508,
+        "anchor_fade": "none measured"
+      }
+    ],
+    "CogVideoX-2b": [
+      {
+        "task": "single_take_identity",
+        "score": 0.9004,
+        "source": "report_limits.json",
+        "frames": 49
+      }
+    ]
+  },
+  "calibration": {
+    "model": "juggernaut-xl-v9",
+    "profile_blocks": 70,
+    "ladder": [
+      0.0075,
+      0.015,
+      0.03
+    ],
+    "probes": [
+      {
+        "strength": 0.0075,
+        "pair_l2": 69.203,
+        "guard_ok": true
+      },
+      {
+        "strength": 0.015,
+        "pair_l2": 66.912,
+        "guard_ok": true
+      },
+      {
+        "strength": 0.03,
+        "pair_l2": 60.091,
+        "guard_ok": true
+      }
+    ],
+    "chosen_strength": 0.03
+  },
+  "flux": {
+    "profile": {
+      "root": "transformer",
+      "block_count": 57,
+      "block_classes": {
+        "FluxTransformerBlock": 19,
+        "FluxSingleTransformerBlock": 38
+      },
+      "sites_per_block": {
+        "legacy": 1,
+        "full": 4,
+        "total": 6
+      },
+      "hidden_sizes": [
+        3072
+      ]
+    },
+    "seconds": 8.14,
+    "portrait": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\adaptive_framework\\flux_portrait_adaptive.png",
+    "stats": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mean": 135.48,
+      "std": 76.29,
+      "sharpness": 147.4,
+      "clipped_frac": 0.0153,
+      "saturation": 45.5,
+      "blank": false
+    }
+  },
+  "routes": {
+    "identity_keyframes": {
+      "task": "identity_keyframes",
+      "model": "juggernaut-xl-v9",
+      "rationale": "ip_face_triad via framework gate (mid+up, 0.30); measured 0.62 ArcFace, 24-segment chain no fade",
+      "measured_records": [
+        {
+          "task": "character_identity_arcface",
+          "score": 0.5823,
+          "source": "report_ipface.json",
+          "arm": "ip_face_triad",
+          "note": "best measured identity channel"
+        },
+        {
+          "task": "character_identity_arcface_baseline",
+          "score": 0.471,
+          "source": "report_ipface.json"
+        },
+        {
+          "task": "character_identity_gate_tuned",
+          "score": 0.6199,
+          "source": "report_gate_scale.json",
+          "arm": "ip_gate_uniform_0.30",
+          "note": "mid+up gate, total strength 0.30"
+        },
+        {
+          "task": "long_chain_identity_24seg",
+          "score": 0.5516,
+          "source": "extreme/report.json",
+          "min": 0.508,
+          "anchor_fade": "none measured"
+        }
+      ]
+    },
+    "coherent_take": {
+      "task": "coherent_take",
+      "model": "CogVideoX-2b",
+      "rationale": "single pass <=121f @512x288, triad total 0.015; identity 0.90+",
+      "measured_records": [
+        {
+          "task": "single_take_identity",
+          "score": 0.9004,
+          "source": "report_limits.json",
+          "frames": 49
+        }
+      ]
+    },
+    "quality_still": {
+      "task": "quality_still",
+      "model": "flux1-schnell",
+      "rationale": "largest local denoiser; patch prior 0.0166, group-offload load; no face-reference channel locally",
+      "measured_records": []
+    },
+    "long_film": {
+      "task": "long_film",
+      "model": "CogVideoX-2b + juggernaut-xl-v9",
+      "rationale": "windowed takes anchored by keyframes; seamless motion chaining pending I2V weights (not local)",
+      "measured_records": [
+        {
+          "task": "single_take_identity",
+          "score": 0.9004,
+          "source": "report_limits.json",
+          "frames": 49
+        }
+      ]
+    },
+    "fast_preview": {
+      "task": "fast_preview",
+      "model": "sdxl-turbo",
+      "rationale": "4-step previews before committing to a route",
+      "measured_records": []
+    }
+  },
+  "verdicts": {
+    "catalog_found_video_and_image": true,
+    "calibration_chose_strength": true,
+    "flux_patch_applied": true,
+    "routes_cover_tasks": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "protocol": "valhalla-character-consistency-v1",
+  "model": "RunDiffusion/Juggernaut-XL-v9",
+  "identity_a": "a 28-year-old woman with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, looking at the camera",
+  "identity_b": "a 45-year-old man with a short grey beard, receding hairline, dark brown eyes, olive skin, looking at the camera",
+  "scenes": [
+    "studio",
+    "outdoor",
+    "profile"
+  ],
+  "seeds": [
+    7,
+    8,
+    9
+  ],
+  "timings": {
+    "baseline_idA_studio_s7": 2.64,
+    "baseline_idA_studio_s8": 2.29,
+    "baseline_idA_studio_s9": 2.29,
+    "baseline_idA_outdoor_s7": 2.27,
+    "baseline_idA_outdoor_s8": 2.26,
+    "baseline_idA_outdoor_s9": 2.25,
+    "baseline_idA_profile_s7": 2.24,
+    "baseline_idA_profile_s8": 2.22,
+    "baseline_idA_profile_s9": 2.19,
+    "baseline_idB_studio_s7": 2.24,
+    "baseline_idB_studio_s8": 2.24,
+    "baseline_idB_studio_s9": 2.24,
+    "triad_total_idA_studio_s7": 3.67,
+    "triad_total_idA_studio_s8": 3.62,
+    "triad_total_idA_studio_s9": 3.51,
+    "triad_total_idA_outdoor_s7": 3.55,
+    "triad_total_idA_outdoor_s8": 3.54,
+    "triad_total_idA_outdoor_s9": 3.5,
+    "triad_total_idA_profile_s7": 3.51,
+    "triad_total_idA_profile_s8": 3.56,
+    "triad_total_idA_profile_s9": 3.49,
+    "triad_total_idB_studio_s7": 3.47,
+    "triad_total_idB_studio_s8": 3.61,
+    "triad_total_idB_studio_s9": 3.52
+  },
+  "baseline": {
+    "same_id_same_scene_face_l2": 50.785,
+    "same_id_same_scene_full_l2": 51.368,
+    "same_id_cross_scene_face_l2": 64.122,
+    "different_id_same_scene_face_l2": 57.303,
+    "identity_margin": 6.518,
+    "cross_scene_holds": false
+  },
+  "triad_total": {
+    "same_id_same_scene_face_l2": 44.601,
+    "same_id_same_scene_full_l2": 44.061,
+    "same_id_cross_scene_face_l2": 61.275,
+    "different_id_same_scene_face_l2": 54.89,
+    "identity_margin": 10.289,
+    "cross_scene_holds": false
+  },
+  "verdicts": {
+    "baseline_separates_identities": true,
+    "patch_separates_identities": true,
+    "patch_same_scene_tighter": true,
+    "patch_cross_scene_tighter": true,
+    "patch_still_holds_identity": false
+  },
+  "visual_inspection": {
+    "studio_s7_vs_s8": "same colouring (chestnut, hazel) but two different faces and haircuts; identity lock is attribute-level, not a single person",
+    "patch_vs_baseline_same_seed": "patch keeps the seed face, slightly tighter lighting; does not swap identity",
+    "outdoor_vs_studio": "same age/hair colour family, different hair length and jaw; scene change breaks pixel identity",
+    "idB_control": "clearly a different person (bearded man); metric margin is valid",
+    "mole": "requested left-cheek mole is absent on most frames"
+  }
+}

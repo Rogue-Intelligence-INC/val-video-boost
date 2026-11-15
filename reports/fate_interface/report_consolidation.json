@@ -1,0 +1,75 @@
+{
+  "protocol": "fate-interface-consolidation-v1",
+  "fingerprint": "85b017178926",
+  "recorded_pool_scores": [
+    0.6525,
+    0.6204,
+    0.7208,
+    0.6214
+  ],
+  "smoke": {
+    "scores": [
+      0.5992,
+      0.5945
+    ],
+    "chosen_cos": 0.5992,
+    "abstained": false,
+    "fingerprint": "85b017178926"
+  },
+  "route": {
+    "task": "identity_no_plugin",
+    "model": "juggernaut-xl-v9",
+    "rationale": "FateInterface: pinned detailed supply + negative facts, best-of-4 select against the enrolled hero, tau=0.5 abstention; measured 0.657 (min 0.603, 6/6 pass), no plugin, no patch -- fictional characters only",
+    "measured_records": [
+      {
+        "task": "character_identity_arcface",
+        "score": 0.5823,
+        "source": "report_ipface.json",
+        "arm": "ip_face_triad",
+        "note": "best measured identity channel"
+      },
+      {
+        "task": "character_identity_arcface_baseline",
+        "score": 0.471,
+        "source": "report_ipface.json"
+      },
+      {
+        "task": "character_identity_gate_tuned",
+        "score": 0.6199,
+        "source": "report_gate_scale.json",
+        "arm": "ip_gate_uniform_0.30",
+        "note": "mid+up gate, total strength 0.30"
+      },
+      {
+        "task": "long_chain_identity_24seg",
+        "score": 0.5516,
+        "source": "extreme/report.json",
+        "min": 0.508,
+        "anchor_fade": "none measured"
+      },
+      {
+        "task": "character_identity_fate_native",
+        "score": 0.6566,
+        "source": "fate_interface/report.json",
+        "arm": "FateInterface supply+select best-of-4, no plugin/patch",
+        "min": 0.6031,
+        "pass_rate": 1.0
+      },
+      {
+        "task": "character_identity_detailed_supply",
+        "score": 0.6102,
+        "source": "context_diagnostic/report_L4.json",
+        "arm": "detailed pinned block + bible negatives, single draw"
+      }
+    ]
+  },
+  "verdicts": {
+    "single_source_of_truth": true,
+    "verbatim_block_all_scenes": true,
+    "select_is_argmax_and_passes": true,
+    "foreign_face_abstains": true,
+    "registry_has_fate_native_record": true,
+    "route_points_at_fate_stack": true,
+    "fresh_generation_selectable": true
+  }
+}

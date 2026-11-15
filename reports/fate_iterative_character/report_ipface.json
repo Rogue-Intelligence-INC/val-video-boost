@@ -1,0 +1,103 @@
+{
+  "protocol": "val-video-boost-ipface-v1",
+  "ip_scale": 0.6,
+  "arms": {
+    "ip_face": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 4.49,
+          "arcface_cos_to_hero": 0.5709
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 3.51,
+          "arcface_cos_to_hero": 0.5951
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 3.53,
+          "arcface_cos_to_hero": 0.5223
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 3.76,
+          "arcface_cos_to_hero": 0.5336
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 3.43,
+          "arcface_cos_to_hero": 0.6254
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 3.39,
+          "arcface_cos_to_hero": 0.6395
+        }
+      ],
+      "mean_cos": 0.5811,
+      "min_cos": 0.5223,
+      "found": 6
+    },
+    "ip_face_triad": {
+      "rows": [
+        {
+          "seed": 7,
+          "scene": "park",
+          "seconds": 4.83,
+          "arcface_cos_to_hero": 0.573
+        },
+        {
+          "seed": 7,
+          "scene": "harbour",
+          "seconds": 4.15,
+          "arcface_cos_to_hero": 0.5277
+        },
+        {
+          "seed": 8,
+          "scene": "park",
+          "seconds": 4.28,
+          "arcface_cos_to_hero": 0.5466
+        },
+        {
+          "seed": 8,
+          "scene": "harbour",
+          "seconds": 4.82,
+          "arcface_cos_to_hero": 0.5565
+        },
+        {
+          "seed": 9,
+          "scene": "park",
+          "seconds": 4.44,
+          "arcface_cos_to_hero": 0.6478
+        },
+        {
+          "seed": 9,
+          "scene": "harbour",
+          "seconds": 4.5,
+          "arcface_cos_to_hero": 0.6422
+        }
+      ],
+      "mean_cos": 0.5823,
+      "min_cos": 0.5277,
+      "found": 6
+    }
+  },
+  "comparison_arcface_mean": {
+    "baseline": 0.471,
+    "static_triad": 0.4333,
+    "ip_face": 0.5811,
+    "ip_face_triad": 0.5823,
+    "different_person_control": 0.1522
+  },
+  "verdicts": {
+    "ip_face": true,
+    "ip_face_triad": true
+  }
+}

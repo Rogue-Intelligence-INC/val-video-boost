@@ -1,0 +1,411 @@
+{
+  "protocol": "val-video-boost-fate-iterative-learning-v2",
+  "reference_naive_repetition": {
+    "final_accuracy": 0.667,
+    "note": "test_fate_learning.py learn arm"
+  },
+  "arms": {
+    "targeted": {
+      "rounds": [
+        {
+          "round": 0,
+          "accuracy": 0.0,
+          "per_q": {
+            "hair": {
+              "correct": false,
+              "grasped": "Filler note 37: Old Lena waits at the salt market.",
+              "margin": 1.178
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+              "margin": 0.0143
+            },
+            "age": {
+              "correct": false,
+              "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+              "margin": 2.4226
+            }
+          }
+        },
+        {
+          "round": 1,
+          "accuracy": 0.3333333333333333,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0099
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.4218
+            },
+            "age": {
+              "correct": false,
+              "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+              "margin": 1.0159
+            }
+          }
+        },
+        {
+          "round": 2,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0317
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3813
+            }
+          }
+        },
+        {
+          "round": 3,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 4,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 5,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 6,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 7,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        }
+      ],
+      "holdout": {
+        "hair": {
+          "correct": true,
+          "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+          "margin": 0.3812
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Filler note 119: Doctor Venn waits at the ferry dock.",
+          "margin": 1.6116
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1157
+        }
+      },
+      "holdout_accuracy": 0.3333333333333333,
+      "final_accuracy": 0.6666666666666666,
+      "taught_counts": {
+        "hair": 1,
+        "mole": 8,
+        "age": 2
+      }
+    },
+    "targeted_incubation8": {
+      "rounds": [
+        {
+          "round": 0,
+          "accuracy": 0.0,
+          "per_q": {
+            "hair": {
+              "correct": false,
+              "grasped": "Filler note 37: Old Lena waits at the salt market.",
+              "margin": 1.178
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+              "margin": 0.0143
+            },
+            "age": {
+              "correct": false,
+              "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+              "margin": 2.4226
+            }
+          }
+        },
+        {
+          "round": 1,
+          "accuracy": 0.3333333333333333,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0099
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.4218
+            },
+            "age": {
+              "correct": false,
+              "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+              "margin": 1.0159
+            }
+          }
+        },
+        {
+          "round": 2,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0317
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3813
+            }
+          }
+        },
+        {
+          "round": 3,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 4,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 5,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 6,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        },
+        {
+          "round": 7,
+          "accuracy": 0.6666666666666666,
+          "per_q": {
+            "hair": {
+              "correct": true,
+              "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+              "margin": 0.0129
+            },
+            "mole": {
+              "correct": false,
+              "grasped": "Correction: the line 'Correction: the line 'Aria is a 28-year-old woman with shoulder-length chestnut brown hair.' does not describe Aria the 28-year-old woman.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.0114
+            },
+            "age": {
+              "correct": true,
+              "grasped": "Correction: the line 'Aria has a small mole on her left cheek and hazel eyes and fair skin.' does not describe Aria the 28-year-old woman.",
+              "margin": 0.3833
+            }
+          }
+        }
+      ],
+      "holdout": {
+        "hair": {
+          "correct": true,
+          "grasped": "Aria, the 28-year-old woman, has chestnut brown hair that reaches her shoulders.",
+          "margin": 0.3812
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Filler note 119: Doctor Venn waits at the ferry dock.",
+          "margin": 1.6116
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1157
+        }
+      },
+      "holdout_accuracy": 0.3333333333333333,
+      "final_accuracy": 0.6666666666666666,
+      "taught_counts": {
+        "hair": 1,
+        "mole": 8,
+        "age": 2
+      }
+    }
+  },
+  "verdicts": {
+    "targeted": {
+      "reaches_full_accuracy": false,
+      "generalises_to_holdout": false
+    },
+    "targeted_incubation8": {
+      "reaches_full_accuracy": false,
+      "generalises_to_holdout": false
+    }
+  }
+}

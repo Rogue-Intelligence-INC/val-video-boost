@@ -1,0 +1,203 @@
+{
+  "protocol": "val-video-boost-longctx-character-v1",
+  "model": "THUDM/CogVideoX-2b",
+  "seed": 7,
+  "steps": 25,
+  "frames_per_segment": 17,
+  "bible": {
+    "lines": 20033,
+    "approx_words": 217994,
+    "conflicts": [],
+    "note": "context held outside diffusion model; CogVideoX T5 cap ~226 tokens"
+  },
+  "identity_patch": {
+    "dim": 256,
+    "tiles": 16,
+    "stems": 115
+  },
+  "arms": {
+    "baseline": [
+      {
+        "dir": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\baseline\\seg0\\try1.0",
+        "seconds": 72.29,
+        "patch": null,
+        "mid_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\baseline\\seg0\\try1.0\\frame_08.png",
+        "face_found": true,
+        "face_l2_to_hero": null,
+        "strength": 0.015,
+        "metrics": {
+          "frames": 17,
+          "blank": 0,
+          "flicker_std": 0.041,
+          "adjacent_mean_abs": 1.891
+        },
+        "status": "accepted",
+        "is_hero": true,
+        "prompt": "photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, cream sweater, grey studio, looking at the camera, steady camera, consistent face, same person throughout",
+        "grasp_lines": [
+          0,
+          5,
+          6,
+          3
+        ]
+      },
+      {
+        "dir": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\baseline\\seg1\\try1.0",
+        "seconds": 39.92,
+        "patch": null,
+        "mid_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\baseline\\seg1\\try1.0\\frame_08.png",
+        "face_found": true,
+        "face_l2_to_hero": 64.423,
+        "strength": 0.015,
+        "metrics": {
+          "frames": 17,
+          "blank": 0,
+          "flicker_std": 1.905,
+          "adjacent_mean_abs": 3.721
+        },
+        "status": "abstained",
+        "prompt": "photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, cream sweater, sunlit park, walking slowly toward camera, steady camera, consistent face, same person throughout",
+        "grasp_lines": [
+          0,
+          1,
+          2,
+          11
+        ]
+      },
+      {
+        "dir": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\baseline\\seg2\\try1.0",
+        "seconds": 34.72,
+        "patch": null,
+        "mid_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\baseline\\seg2\\try1.0\\frame_08.png",
+        "face_found": true,
+        "face_l2_to_hero": 121.286,
+        "strength": 0.015,
+        "metrics": {
+          "frames": 17,
+          "blank": 0,
+          "flicker_std": 0.356,
+          "adjacent_mean_abs": 3.39
+        },
+        "status": "abstained",
+        "prompt": "photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, cream sweater, quiet harbour at dusk, turning her head to the sea breeze, steady camera, consistent face, same person throughout",
+        "grasp_lines": [
+          0,
+          3,
+          4,
+          16979
+        ]
+      }
+    ],
+    "identity_lock": [
+      {
+        "dir": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\identity_lock\\seg0\\try1.0",
+        "seconds": 38.39,
+        "patch": {
+          "fires": 3750,
+          "sites": 150
+        },
+        "mid_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\identity_lock\\seg0\\try1.0\\frame_08.png",
+        "face_found": true,
+        "face_l2_to_hero": null,
+        "strength": 0.015,
+        "metrics": {
+          "frames": 17,
+          "blank": 0,
+          "flicker_std": 0.189,
+          "adjacent_mean_abs": 0.538
+        },
+        "status": "accepted",
+        "is_hero": true,
+        "prompt": "photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, cream sweater, grey studio, looking at the camera, steady camera, consistent face, same person throughout",
+        "grasp_lines": [
+          0,
+          5,
+          6,
+          3
+        ]
+      },
+      {
+        "dir": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\identity_lock\\seg1\\try2.0",
+        "seconds": 39.16,
+        "patch": {
+          "fires": 3750,
+          "sites": 150
+        },
+        "mid_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\identity_lock\\seg1\\try2.0\\frame_08.png",
+        "face_found": true,
+        "face_l2_to_hero": 119.918,
+        "strength": 0.03,
+        "metrics": {
+          "frames": 17,
+          "blank": 0,
+          "flicker_std": 0.294,
+          "adjacent_mean_abs": 0.551
+        },
+        "status": "abstained",
+        "prompt": "photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, cream sweater, sunlit park, walking slowly toward camera, steady camera, consistent face, same person throughout",
+        "grasp_lines": [
+          0,
+          1,
+          2,
+          11
+        ]
+      },
+      {
+        "dir": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\identity_lock\\seg2\\try2.0",
+        "seconds": 38.41,
+        "patch": {
+          "fires": 3750,
+          "sites": 150
+        },
+        "mid_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\long_video_character\\identity_lock\\seg2\\try2.0\\frame_08.png",
+        "face_found": false,
+        "face_l2_to_hero": null,
+        "strength": 0.03,
+        "metrics": {
+          "frames": 17,
+          "blank": 0,
+          "flicker_std": 0.264,
+          "adjacent_mean_abs": 0.409
+        },
+        "status": "abstained",
+        "prompt": "photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, cream sweater, quiet harbour at dusk, turning her head to the sea breeze, steady camera, consistent face, same person throughout",
+        "grasp_lines": [
+          0,
+          3,
+          4,
+          16979
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "baseline_cross_segment_face_l2": 92.855,
+    "patched_cross_segment_face_l2": 119.918,
+    "faces_found": {
+      "baseline": 3,
+      "identity_lock": 2
+    },
+    "accepted": {
+      "baseline": 1,
+      "identity_lock": 1
+    },
+    "flicker": {
+      "baseline": [
+        0.041,
+        1.905,
+        0.356
+      ],
+      "identity_lock": [
+        0.189,
+        0.294,
+        0.264
+      ]
+    }
+  },
+  "verdicts": {
+    "patch_cross_segment_tighter": false,
+    "all_faces_found_patched": false,
+    "person_level_lock_claimed": false,
+    "person_level_lock_note": "see docs/DESIGN.md ceiling: needs I2V/IP-Adapter-Face reference conditioner"
+  }
+}

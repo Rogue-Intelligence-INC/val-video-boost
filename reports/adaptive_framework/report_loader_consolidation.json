@@ -1,0 +1,36 @@
+{
+  "protocol": "val-video-boost-loader-consolidation-v1",
+  "decisions": {
+    "cogvideo_speed": "cpu_offload",
+    "cogvideo_memory": "sequential",
+    "flux_speed": "group_offload",
+    "sdxl_speed": "resident",
+    "unknown_fallback": "cpu_offload"
+  },
+  "expected": {
+    "cogvideo_speed": "cpu_offload",
+    "cogvideo_memory": "sequential",
+    "flux_speed": "group_offload",
+    "sdxl_speed": "resident",
+    "unknown_fallback": "cpu_offload"
+  },
+  "speed_arm": {
+    "strategy": "cpu_offload",
+    "frames": 17,
+    "seconds": 11.4,
+    "peak_gpu_gb": 11.59
+  },
+  "memory_arm": {
+    "strategy": "sequential",
+    "frames": 17,
+    "seconds": 16.5,
+    "peak_gpu_gb": 7.05
+  },
+  "verdicts": {
+    "decisions_match": true,
+    "speed_arm_generates": true,
+    "memory_arm_generates": true,
+    "ordering_preserved": true,
+    "records_present": true
+  }
+}

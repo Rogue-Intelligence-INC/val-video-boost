@@ -1,0 +1,99 @@
+{
+  "protocol": "val-video-boost-single-take-v1",
+  "model": "THUDM/CogVideoX-2b",
+  "prompt": "one continuous shot, photorealistic video of the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin, wearing a cream sweater, walking slowly toward the camera through a quiet park at golden hour, camera dollies backward smoothly, she keeps looking at the camera, same person throughout, steady continuous take",
+  "seed": 7,
+  "steps": 25,
+  "frames": 49,
+  "seconds": 28.33,
+  "patch_sites": {
+    "fires": 3750,
+    "sites": 150
+  },
+  "clip_metrics": {
+    "frames": 49,
+    "blank": 0,
+    "flicker_std": 2.452,
+    "adjacent_mean_abs": 3.862
+  },
+  "frame_samples": [
+    {
+      "frame": 0,
+      "face": true,
+      "cos_to_first_face": 1.0
+    },
+    {
+      "frame": 4,
+      "face": true,
+      "cos_to_first_face": 0.9663
+    },
+    {
+      "frame": 8,
+      "face": true,
+      "cos_to_first_face": 0.9553
+    },
+    {
+      "frame": 12,
+      "face": true,
+      "cos_to_first_face": 0.9154
+    },
+    {
+      "frame": 16,
+      "face": true,
+      "cos_to_first_face": 0.9014
+    },
+    {
+      "frame": 20,
+      "face": true,
+      "cos_to_first_face": 0.7445
+    },
+    {
+      "frame": 24,
+      "face": true,
+      "cos_to_first_face": 0.9101
+    },
+    {
+      "frame": 28,
+      "face": true,
+      "cos_to_first_face": 0.9052
+    },
+    {
+      "frame": 32,
+      "face": true,
+      "cos_to_first_face": 0.915
+    },
+    {
+      "frame": 36,
+      "face": true,
+      "cos_to_first_face": 0.898
+    },
+    {
+      "frame": 40,
+      "face": true,
+      "cos_to_first_face": 0.8244
+    },
+    {
+      "frame": 44,
+      "face": true,
+      "cos_to_first_face": 0.8515
+    },
+    {
+      "frame": 48,
+      "face": true,
+      "cos_to_first_face": 0.9092
+    },
+    {
+      "frame": 48,
+      "face": true,
+      "cos_to_first_face": 0.9092
+    }
+  ],
+  "video_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\single_film\\aria_one_take.mp4",
+  "summary": {
+    "faces_found": 14,
+    "mean_cos_to_first": 0.9004,
+    "min_cos_to_first": 0.7445,
+    "first_cos": 1.0,
+    "last_cos": 0.9092
+  }
+}

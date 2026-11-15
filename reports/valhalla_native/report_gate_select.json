@@ -1,0 +1,187 @@
+{
+  "protocol": "val-video-boost-gate-select-v1",
+  "tau": 0.5,
+  "candidates": 4,
+  "rows": [
+    {
+      "seed": 7,
+      "scene": "park",
+      "candidates": [
+        {
+          "k": 0,
+          "seed": 700,
+          "cos": 0.231
+        },
+        {
+          "k": 1,
+          "seed": 701,
+          "cos": 0.3861
+        },
+        {
+          "k": 2,
+          "seed": 702,
+          "cos": 0.3807
+        },
+        {
+          "k": 3,
+          "seed": 703,
+          "cos": 0.2679
+        }
+      ],
+      "selected_cos": 0.3861,
+      "status": "abstained",
+      "first_candidate_cos": 0.231
+    },
+    {
+      "seed": 7,
+      "scene": "harbour",
+      "candidates": [
+        {
+          "k": 0,
+          "seed": 700,
+          "cos": 0.2392
+        },
+        {
+          "k": 1,
+          "seed": 701,
+          "cos": 0.3603
+        },
+        {
+          "k": 2,
+          "seed": 702,
+          "cos": 0.3334
+        },
+        {
+          "k": 3,
+          "seed": 703,
+          "cos": 0.3357
+        }
+      ],
+      "selected_cos": 0.3603,
+      "status": "abstained",
+      "first_candidate_cos": 0.2392
+    },
+    {
+      "seed": 8,
+      "scene": "park",
+      "candidates": [
+        {
+          "k": 0,
+          "seed": 800,
+          "cos": 0.4782
+        },
+        {
+          "k": 1,
+          "seed": 801,
+          "cos": 0.5644
+        },
+        {
+          "k": 2,
+          "seed": 802,
+          "cos": 0.4359
+        },
+        {
+          "k": 3,
+          "seed": 803,
+          "cos": 0.5616
+        }
+      ],
+      "selected_cos": 0.5644,
+      "status": "accepted",
+      "first_candidate_cos": 0.4782
+    },
+    {
+      "seed": 8,
+      "scene": "harbour",
+      "candidates": [
+        {
+          "k": 0,
+          "seed": 800,
+          "cos": 0.3062
+        },
+        {
+          "k": 1,
+          "seed": 801,
+          "cos": 0.5481
+        },
+        {
+          "k": 2,
+          "seed": 802,
+          "cos": 0.5558
+        },
+        {
+          "k": 3,
+          "seed": 803,
+          "cos": 0.5134
+        }
+      ],
+      "selected_cos": 0.5558,
+      "status": "accepted",
+      "first_candidate_cos": 0.3062
+    },
+    {
+      "seed": 9,
+      "scene": "park",
+      "candidates": [
+        {
+          "k": 0,
+          "seed": 900,
+          "cos": 0.6139
+        },
+        {
+          "k": 1,
+          "seed": 901,
+          "cos": 0.5328
+        },
+        {
+          "k": 2,
+          "seed": 902,
+          "cos": 0.6443
+        },
+        {
+          "k": 3,
+          "seed": 903,
+          "cos": 0.6483
+        }
+      ],
+      "selected_cos": 0.6483,
+      "status": "accepted",
+      "first_candidate_cos": 0.6139
+    },
+    {
+      "seed": 9,
+      "scene": "harbour",
+      "candidates": [
+        {
+          "k": 0,
+          "seed": 900,
+          "cos": 0.6071
+        },
+        {
+          "k": 1,
+          "seed": 901,
+          "cos": 0.4931
+        },
+        {
+          "k": 2,
+          "seed": 902,
+          "cos": 0.5376
+        },
+        {
+          "k": 3,
+          "seed": 903,
+          "cos": 0.6373
+        }
+      ],
+      "selected_cos": 0.6373,
+      "status": "accepted",
+      "first_candidate_cos": 0.6071
+    }
+  ],
+  "summary": {
+    "selected_mean_cos": 0.5254,
+    "single_candidate_mean_cos": 0.4126,
+    "accepted": 4,
+    "segments": 6
+  }
+}

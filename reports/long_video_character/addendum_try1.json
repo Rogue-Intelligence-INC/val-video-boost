@@ -1,0 +1,27 @@
+{
+  "note": "Post-hoc same-strength (try1.0, total 0.015) comparison; report.json kept the original up-ladder run as failure evidence. Ladder fixed to (1.0, 0.5) + best-try in code/video_boost.py after this run.",
+  "cross_segment_face_l2_try1": {
+    "baseline": {"seg1": 64.423, "seg2_profile_view": 121.286, "mean": 92.855},
+    "identity_lock": {"seg1": 96.411, "seg2_profile_view": 133.229, "mean": 114.82}
+  },
+  "within_segment_adjacent_mean_abs_try1": {
+    "baseline": [1.891, 3.721, 3.39],
+    "identity_lock": [0.538, 1.44, 1.755],
+    "mean_baseline": 3.001,
+    "mean_identity_lock": 1.244,
+    "improvement_pct": 58.5
+  },
+  "visual_inspection": {
+    "hero_baseline": "black bob hair (identity says chestnut) - attribute miss",
+    "hero_patched": "chestnut shoulder hair, cream sweater, grey studio - attribute hit, patch direction works",
+    "seg1_patched_try1": "face present, reddish-brown hair, park scene; a different person from hero at pixel level",
+    "seg2_both": "profile view; face-crop L2 not comparable across pose, excluded from identity claims",
+    "strength_x2": "stripe/grid artefacts, face destroyed - up-ladder is harmful on CogVideoX faces, removed"
+  },
+  "verdicts": {
+    "ultra_long_context_held_outside_model": true,
+    "within_segment_temporal_stability_improved": true,
+    "cross_segment_person_level_lock": false,
+    "next_required": "reference-image conditioner (CogVideoX-I2V or IP-Adapter-Face) anchored on accepted hero frame, verifier-gated"
+  }
+}

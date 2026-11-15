@@ -1,0 +1,342 @@
+{
+  "protocol": "val-video-boost-fate-iterative-learning-v4",
+  "rounds": [
+    {
+      "round": 0,
+      "accuracy": 0.0,
+      "per_q": {
+        "hair": {
+          "correct": false,
+          "grasped": "Filler note 37: Old Lena waits at the salt market.",
+          "margin": 1.178,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 3.151302006920324
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.0143,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.133439751111858
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 2.4226,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.789531825663487
+        }
+      }
+    },
+    {
+      "round": 1,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.531,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3064043048101053,
+          "top_score": 4.837390400175119
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.0143,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3342266928927518,
+          "top_score": 4.13977551319355
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2306,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 5.0029613565149385
+        }
+      }
+    },
+    {
+      "round": 2,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 3,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 4,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 5,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 6,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 7,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 8,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    },
+    {
+      "round": 9,
+      "accuracy": 0.3333333333333333,
+      "per_q": {
+        "hair": {
+          "correct": true,
+          "grasped": "The hair of Aria is chestnut brown.",
+          "margin": 1.5386,
+          "first_acceptable_rank": 1,
+          "first_acceptable_score": 3.3196576380097937,
+          "top_score": 4.858268236700662
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179,
+          "first_acceptable_rank": 4,
+          "first_acceptable_score": 3.3356984603311033,
+          "top_score": 4.266115455706979
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.2219,
+          "first_acceptable_rank": null,
+          "first_acceptable_score": null,
+          "top_score": 4.907465113707465
+        }
+      }
+    }
+  ],
+  "holdout": {
+    "hair": {
+      "correct": false,
+      "grasped": "Another Aria is a blonde child who runs at the harbour.",
+      "margin": 0.4067,
+      "first_acceptable_rank": 2,
+      "first_acceptable_score": 3.072106537783583,
+      "top_score": 3.5470700848569807
+    },
+    "mole": {
+      "correct": false,
+      "grasped": "Filler note 119: Doctor Venn waits at the ferry dock.",
+      "margin": 0.0213,
+      "first_acceptable_rank": null,
+      "first_acceptable_score": null,
+      "top_score": 1.5239582593632761
+    },
+    "age": {
+      "correct": false,
+      "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+      "margin": 0.4041,
+      "first_acceptable_rank": 1,
+      "first_acceptable_score": 3.1360363914915084,
+      "top_score": 3.540129721186075
+    }
+  },
+  "holdout_accuracy": 0.0,
+  "final_accuracy": 0.3333333333333333,
+  "taught_counts": {
+    "hair": 1,
+    "mole": 10,
+    "age": 10
+  },
+  "verdicts": {
+    "reaches_full_accuracy": false,
+    "generalises_to_holdout": false
+  }
+}

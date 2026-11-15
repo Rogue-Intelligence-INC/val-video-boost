@@ -1,0 +1,8 @@
+Question: What colour is Aria's hair? Answer: Aria's hair is chestnut brown.
+Question: How long is the hair of Aria? Answer: Aria's hair is shoulder-length.
+Question: Does Aria have a mole? Answer: Aria has a small mole on her left cheek.
+Question: What is the colour of Aria's eyes? Answer: Aria's eyes are hazel.
+Question: How old is Aria? Answer: Aria is a 28-year-old woman.
+Question: What does Aria's face look like? Answer: Aria has a slim oval face and a straight nose.
+Question: Is Aria blonde? Answer: Aria is never blonde; her hair is chestnut brown.
+Question: Who stays the same in every scene? Answer: Aria is the same single person in every scene.

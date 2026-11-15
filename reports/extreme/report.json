@@ -1,0 +1,368 @@
+{
+  "protocol": "val-video-boost-extreme-v1",
+  "anchor": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_iterative_character\\static_triad\\s7_studio.png",
+  "bible_lines": 100113,
+  "segments": 24,
+  "rows": [
+    {
+      "segment": 0,
+      "scene": "park_noon",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg00_park_noon_s21.png",
+      "seconds": 4.52,
+      "arcface_cos_to_anchor": 0.5694,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        5,
+        6,
+        1
+      ]
+    },
+    {
+      "segment": 1,
+      "scene": "park_noon",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg01_park_noon_s22.png",
+      "seconds": 4.71,
+      "arcface_cos_to_anchor": 0.5373,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        5,
+        6,
+        1
+      ]
+    },
+    {
+      "segment": 2,
+      "scene": "harbour_dusk",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg02_harbour_dusk_s21.png",
+      "seconds": 4.93,
+      "arcface_cos_to_anchor": 0.5527,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4,
+        100105
+      ]
+    },
+    {
+      "segment": 3,
+      "scene": "harbour_dusk",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg03_harbour_dusk_s22.png",
+      "seconds": 4.42,
+      "arcface_cos_to_anchor": 0.5187,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4,
+        100105
+      ]
+    },
+    {
+      "segment": 4,
+      "scene": "neon_night",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg04_neon_night_s21.png",
+      "seconds": 4.44,
+      "arcface_cos_to_anchor": 0.5951,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 5,
+      "scene": "neon_night",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg05_neon_night_s22.png",
+      "seconds": 4.82,
+      "arcface_cos_to_anchor": 0.5297,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 6,
+      "scene": "cafe_rain",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg06_cafe_rain_s21.png",
+      "seconds": 4.3,
+      "arcface_cos_to_anchor": 0.5302,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4,
+        100057
+      ]
+    },
+    {
+      "segment": 7,
+      "scene": "cafe_rain",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg07_cafe_rain_s22.png",
+      "seconds": 4.42,
+      "arcface_cos_to_anchor": 0.5297,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4,
+        100057
+      ]
+    },
+    {
+      "segment": 8,
+      "scene": "beach_noon",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg08_beach_noon_s21.png",
+      "seconds": 4.35,
+      "arcface_cos_to_anchor": 0.6169,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 9,
+      "scene": "beach_noon",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg09_beach_noon_s22.png",
+      "seconds": 4.52,
+      "arcface_cos_to_anchor": 0.5496,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 10,
+      "scene": "snow_village",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg10_snow_village_s21.png",
+      "seconds": 4.22,
+      "arcface_cos_to_anchor": 0.5505,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 11,
+      "scene": "snow_village",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg11_snow_village_s22.png",
+      "seconds": 5.01,
+      "arcface_cos_to_anchor": 0.5765,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 12,
+      "scene": "library",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg12_library_s21.png",
+      "seconds": 4.36,
+      "arcface_cos_to_anchor": 0.5511,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4,
+        100110
+      ]
+    },
+    {
+      "segment": 13,
+      "scene": "library",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg13_library_s22.png",
+      "seconds": 4.58,
+      "arcface_cos_to_anchor": 0.5481,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4,
+        100110
+      ]
+    },
+    {
+      "segment": 14,
+      "scene": "office",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg14_office_s21.png",
+      "seconds": 4.56,
+      "arcface_cos_to_anchor": 0.5634,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 15,
+      "scene": "office",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg15_office_s22.png",
+      "seconds": 4.54,
+      "arcface_cos_to_anchor": 0.508,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 16,
+      "scene": "desert_sunset",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg16_desert_sunset_s21.png",
+      "seconds": 4.65,
+      "arcface_cos_to_anchor": 0.5646,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 17,
+      "scene": "desert_sunset",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg17_desert_sunset_s22.png",
+      "seconds": 4.51,
+      "arcface_cos_to_anchor": 0.5298,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 18,
+      "scene": "forest_fog",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg18_forest_fog_s21.png",
+      "seconds": 4.5,
+      "arcface_cos_to_anchor": 0.558,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 19,
+      "scene": "forest_fog",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg19_forest_fog_s22.png",
+      "seconds": 4.49,
+      "arcface_cos_to_anchor": 0.5486,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 20,
+      "scene": "crosswalk_evening",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg20_crosswalk_evening_s21.png",
+      "seconds": 4.45,
+      "arcface_cos_to_anchor": 0.5327,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 21,
+      "scene": "crosswalk_evening",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg21_crosswalk_evening_s22.png",
+      "seconds": 4.47,
+      "arcface_cos_to_anchor": 0.5661,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 22,
+      "scene": "rooftop_golden",
+      "seed": 21,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg22_rooftop_golden_s21.png",
+      "seconds": 4.4,
+      "arcface_cos_to_anchor": 0.5591,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    },
+    {
+      "segment": 23,
+      "scene": "rooftop_golden",
+      "seed": 22,
+      "file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\extreme\\seg23_rooftop_golden_s22.png",
+      "seconds": 4.26,
+      "arcface_cos_to_anchor": 0.5537,
+      "retried": false,
+      "grasp_lines": [
+        0,
+        3,
+        4
+      ]
+    }
+  ],
+  "summary": {
+    "mean_cos": 0.5516,
+    "min_cos": 0.508,
+    "pct_ge_0.5": 100.0,
+    "first_half_mean": 0.5547,
+    "second_half_mean": 0.5486,
+    "retries": 0,
+    "faces_found": 24
+  },
+  "verdicts": {
+    "mean_ge_0.5": true,
+    "pct_ge_0.5_at_least_90": true,
+    "worst_ge_0.40": true,
+    "anchor_does_not_fade": true,
+    "EXTREME_PASS": true
+  }
+}

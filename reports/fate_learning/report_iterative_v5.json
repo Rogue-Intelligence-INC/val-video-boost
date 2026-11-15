@@ -1,0 +1,483 @@
+{
+  "protocol": "val-video-boost-fate-iterative-learning-v5-coverage",
+  "curve": [
+    {
+      "round": 0,
+      "train": 0.0,
+      "holdout": 0.0,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Filler note 37: Old Lena waits at the salt market.",
+          "margin": 1.178
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.0143
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 2.4226
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Filler note 118: Sister Mara waits at the old library.",
+          "margin": 0.012
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Filler note 80: Priest Tomas waits at the north gate.",
+          "margin": 0.0311
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.8504
+        }
+      }
+    },
+    {
+      "round": 1,
+      "train": 0.0,
+      "holdout": 0.3333333333333333,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Maria is a 28-year-old woman with chestnut brown hair and blue eyes.",
+          "margin": 0.7927
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1257
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1402
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What colour is Aria's hair? Answer: chestnut brown, shoulder-length.",
+          "margin": 0.7634
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Filler note 80: Priest Tomas waits at the north gate.",
+          "margin": 0.0311
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.018
+        }
+      }
+    },
+    {
+      "round": 2,
+      "train": 0.3333333333333333,
+      "holdout": 0.6666666666666666,
+      "train_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.0097
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1327
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.2183
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 2.9827
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.011
+        }
+      }
+    },
+    {
+      "round": 3,
+      "train": 0.3333333333333333,
+      "holdout": 0.6666666666666666,
+      "train_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.0097
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1327
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.2183
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 3.0627
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.6761
+        }
+      }
+    },
+    {
+      "round": 4,
+      "train": 0.3333333333333333,
+      "holdout": 0.6666666666666666,
+      "train_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.0131
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1327
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.2183
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 3.0741
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.6775
+        }
+      }
+    },
+    {
+      "round": 5,
+      "train": 0.3333333333333333,
+      "holdout": 0.6666666666666666,
+      "train_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.0131
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.1298
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.2432
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 3.0741
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.022
+        }
+      }
+    },
+    {
+      "round": 6,
+      "train": 0.0,
+      "holdout": 0.6666666666666666,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Question: What age is the woman Aria? Answer: 28 years of age.",
+          "margin": 0.2042
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 0.1179
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Question: Where on her face is Aria's mole? Answer: on the left cheek.",
+          "margin": 0.0224
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.261
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 1.4854
+        },
+        "age": {
+          "correct": false,
+          "grasped": "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+          "margin": 0.022
+        }
+      }
+    },
+    {
+      "round": 7,
+      "train": 0.3333333333333333,
+      "holdout": 1.0,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Question: What age is the woman Aria? Answer: 28 years of age.",
+          "margin": 0.1414
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 1.368
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: How old is Aria, the woman with a mole on her left cheek? Answer: 28 years old.",
+          "margin": 0.7981
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.2314
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 1.3295
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Aria is how many years old? Answer: twenty-eight.",
+          "margin": 0.0188
+        }
+      }
+    },
+    {
+      "round": 8,
+      "train": 0.3333333333333333,
+      "holdout": 1.0,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Question: What age is the woman Aria? Answer: 28 years of age.",
+          "margin": 0.1215
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 1.3372
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Where is the mole of Aria, the 28-year-old woman? Answer: on her left cheek.",
+          "margin": 0.7973
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.1957
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 1.4895
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Aria is how many years old? Answer: twenty-eight.",
+          "margin": 0.0188
+        }
+      }
+    },
+    {
+      "round": 9,
+      "train": 0.3333333333333333,
+      "holdout": 1.0,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Question: What age is the woman Aria? Answer: 28 years of age.",
+          "margin": 0.1239
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 1.3169
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Where is the mole of Aria, the 28-year-old woman? Answer: on her left cheek.",
+          "margin": 0.8
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.1957
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 1.4931
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Aria is how many years old? Answer: twenty-eight.",
+          "margin": 0.0188
+        }
+      }
+    },
+    {
+      "round": 10,
+      "train": 0.3333333333333333,
+      "holdout": 1.0,
+      "train_detail": {
+        "hair": {
+          "correct": false,
+          "grasped": "Question: What age is the woman Aria? Answer: 28 years of age.",
+          "margin": 0.1116
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 1.3169
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Where is the mole of Aria, the 28-year-old woman? Answer: on her left cheek.",
+          "margin": 0.8
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What is the hair colour of Aria? Answer: Aria's hair is chestnut brown.",
+          "margin": 0.1665
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 1.4931
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Aria is how many years old? Answer: twenty-eight.",
+          "margin": 0.0188
+        }
+      }
+    },
+    {
+      "round": 11,
+      "train": 0.6666666666666666,
+      "holdout": 1.0,
+      "train_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What colour is the hair of Aria, the 28-year-old woman? Answer: chestnut brown.",
+          "margin": 1.1008
+        },
+        "mole": {
+          "correct": false,
+          "grasped": "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+          "margin": 1.3088
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Where is the mole of Aria, the 28-year-old woman? Answer: on her left cheek.",
+          "margin": 0.8
+        }
+      },
+      "holdout_detail": {
+        "hair": {
+          "correct": true,
+          "grasped": "Question: What colour is the hair of Aria, the 28-year-old woman? Answer: chestnut brown.",
+          "margin": 0.7297
+        },
+        "mole": {
+          "correct": true,
+          "grasped": "Question: Which cheek carries Aria's mole? Answer: the left cheek.",
+          "margin": 1.4931
+        },
+        "age": {
+          "correct": true,
+          "grasped": "Question: Aria is how many years old? Answer: twenty-eight.",
+          "margin": 0.0188
+        }
+      }
+    }
+  ],
+  "taught_counts": {
+    "hair": 7,
+    "mole": 9,
+    "age": 7
+  },
+  "verdicts": {
+    "train_reaches_full": false,
+    "holdout_generalises": true,
+    "holdout_improved": true
+  }
+}
