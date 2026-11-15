@@ -15,7 +15,7 @@ A fictional character can now be kept consistent across scenes **with no generat
 2. **Candidate generation** — 4 candidates per segment from a frozen diffusion model.
 3. **Fate gate** — a designated hero face is enrolled once; `FateInterface.select()` keeps only the closest candidate, `verify()` abstains (flags for regeneration) below τ = 0.5 instead of passing silently.
 
-Measured on Juggernaut XL (3 seeds × park/harbour, ArcFace to each chain's studio hero): **mean 0.657, minimum 0.603, 6/6 segments above threshold** — at or above the IP-Adapter plugin reference (0.581 uniform; 0.62 block-gated).
+Measured on Juggernaut XL (3 seeds × park/harbour, ArcFace to each chain's studio hero): **mean 0.657, minimum 0.603, 6/6 segments above threshold** — at or above the IP-Adapter plugin reference (0.581 uniform; 0.62 block-gated). The same stack then passed the plugin extreme test's own protocol over 24 segments / 12 hostile scenes: **mean 0.6299, min 0.5445, 24/24 ≥ 0.5, zero abstentions, no anchor fade (first half 0.6245 → second half 0.6353)**, vs the plugin arm's 0.5516 / 0.508 on the same pass bar.
 
 ## 3. What the measurements showed, layer by layer
 
@@ -57,7 +57,7 @@ In pure-text Fate sessions, repetitive teaching and human-style correction (incl
 ### 3.5 Video findings (CogVideoX-2b)
 
 - Within a single take, identity is already strong and needs no machinery: ArcFace to first frame 0.90 (49 f) / 0.89 (81 f) / 0.96+ (121 f, at 512×288; 121 frames is the measured ceiling, 161 collapses). Longer takes trade motion for stability.
-- Across T2V windows, identity restarts from scratch (seam 0.221): prompt + patch cannot carry a face across windows. The no-plugin answer is the same gate as for images — generate several takes, keep the one whose first frame matches the enrolled anchor — not yet run end-to-end for video.
+- Across T2V windows, identity restarts from scratch (seam 0.221): prompt + patch cannot carry a face across windows. The take-selection version has now been run end-to-end and **fails honestly**: W1 within-take self-score 0.904, but three W2 takes score 0.258 / 0.254 / 0.081 against the W1 anchor — the candidate pool is centred far from the anchor, and selection can only choose within a pool's variance (the same law as the foreign-face case). Video cross-window identity therefore still requires pixel anchoring (I2V weights, not on this machine); the gate's role there is measurement and abstention, which it performed correctly.
 - Loading is a scheduling decision, measured: CPU offload 8.7 s / 15.3 GB beat full residency (193 s / 22.5 GB, VRAM spill) and sequential offload (101 s / 7.1 GB) on this machine; consolidated into `adaptive_framework.choose_loader/apply_loader`.
 
 ## 4. The consolidated stack (current, regression-tested)
@@ -82,8 +82,9 @@ adaptive_framework.route("identity_no_plugin"))
 ## 5. What still needs a plugin — stated plainly
 
 - **A designated external face** (a real person's photo, someone else's artwork): text carries tens of bits and selects a sub-population, never one face. Selecting for a foreign face from an Aria-text pool reached only 0.372 and was correctly abstained by the gate. Reference conditioning (IP-Adapter / I2V) remains information-theoretically necessary there; the router keeps a `designated_external_face` route for it, with this measurement as the stated reason.
-- **Multiple similar protagonists** in one production: identity margin is only ~0.14, so face-level confusion is a real risk; per-character enrolled anchors mitigate but have not been stress-tested.
-- Not yet validated: the 12-scene no-plugin long chain against the plugin's extreme-test benchmark (IP chain: 24/24 ≥ 0.5, mean 0.5516), and the video-side take-selection loop.
+- **Multiple protagonists**: partially de-risked since the first draft — two detailed-supply characters (Aria/Sofia) alternating scenes now measure margins of 0.269 / 0.263 with cross-means 0.34 / 0.38 (both below threshold, cross-max 0.494, close to the line). Two characters *in the same frame* remain untested.
+- **FLUX does not benefit from the detailed supply** (0.476 vs its 0.480 short baseline): the supply gain is a Juggernaut/SDXL property, not a generic text-channel law. FLUX stays routed to quality stills.
+- Not yet validated: head-to-head numbers against commercial platforms (Runway/Vidu/Kling) under one protocol, two characters in one frame, and any video cross-window identity (blocked on I2V weights).
 
 ## 6. Bottom line
 

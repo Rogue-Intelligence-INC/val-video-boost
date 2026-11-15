@@ -1,0 +1,383 @@
+{
+  "protocol": "fate-pressure48-anchor-switch-v1",
+  "new_rows": [
+    {
+      "segment": 24,
+      "scene": "park_noon",
+      "seed": 31,
+      "chosen_cos": 0.5238,
+      "abstained": false,
+      "pool_scores": [
+        0.4478,
+        0.4331,
+        0.5238,
+        0.3984
+      ]
+    },
+    {
+      "segment": 25,
+      "scene": "park_noon",
+      "seed": 32,
+      "chosen_cos": 0.5548,
+      "abstained": false,
+      "pool_scores": [
+        0.5548,
+        0.4381,
+        0.5196,
+        0.501
+      ]
+    },
+    {
+      "segment": 26,
+      "scene": "harbour_dusk",
+      "seed": 31,
+      "chosen_cos": 0.6339,
+      "abstained": false,
+      "pool_scores": [
+        0.534,
+        0.5506,
+        0.5676,
+        0.6339
+      ]
+    },
+    {
+      "segment": 27,
+      "scene": "harbour_dusk",
+      "seed": 32,
+      "chosen_cos": 0.5888,
+      "abstained": false,
+      "pool_scores": [
+        0.5143,
+        0.5718,
+        0.5888,
+        0.5493
+      ]
+    },
+    {
+      "segment": 28,
+      "scene": "neon_night",
+      "seed": 31,
+      "chosen_cos": 0.6668,
+      "abstained": false,
+      "pool_scores": [
+        0.6255,
+        0.6518,
+        0.6399,
+        0.6668
+      ]
+    },
+    {
+      "segment": 29,
+      "scene": "neon_night",
+      "seed": 32,
+      "chosen_cos": 0.6727,
+      "abstained": false,
+      "pool_scores": [
+        0.6727,
+        0.635,
+        0.5799,
+        0.5463
+      ]
+    },
+    {
+      "segment": 30,
+      "scene": "cafe_rain",
+      "seed": 31,
+      "chosen_cos": 0.6281,
+      "abstained": false,
+      "pool_scores": [
+        0.5522,
+        0.6281,
+        0.4982,
+        0.5878
+      ]
+    },
+    {
+      "segment": 31,
+      "scene": "cafe_rain",
+      "seed": 32,
+      "chosen_cos": 0.5911,
+      "abstained": false,
+      "pool_scores": [
+        0.4603,
+        0.5715,
+        0.5911,
+        0.5895
+      ]
+    },
+    {
+      "segment": 32,
+      "scene": "beach_noon",
+      "seed": 31,
+      "chosen_cos": 0.6209,
+      "abstained": false,
+      "pool_scores": [
+        0.576,
+        0.5571,
+        0.5317,
+        0.6209
+      ]
+    },
+    {
+      "segment": 33,
+      "scene": "beach_noon",
+      "seed": 32,
+      "chosen_cos": 0.6059,
+      "abstained": false,
+      "pool_scores": [
+        0.5783,
+        0.6059,
+        0.4629,
+        0.4996
+      ]
+    },
+    {
+      "segment": 34,
+      "scene": "snow_village",
+      "seed": 31,
+      "chosen_cos": 0.6184,
+      "abstained": false,
+      "pool_scores": [
+        0.6182,
+        0.6184,
+        0.557,
+        0.4678
+      ]
+    },
+    {
+      "segment": 35,
+      "scene": "snow_village",
+      "seed": 32,
+      "chosen_cos": 0.5989,
+      "abstained": false,
+      "pool_scores": [
+        0.5778,
+        0.5709,
+        0.5609,
+        0.5989
+      ]
+    },
+    {
+      "segment": 36,
+      "scene": "library",
+      "seed": 31,
+      "chosen_cos": 0.5912,
+      "abstained": false,
+      "pool_scores": [
+        0.5901,
+        0.5912,
+        0.546,
+        0.5587
+      ]
+    },
+    {
+      "segment": 37,
+      "scene": "library",
+      "seed": 32,
+      "chosen_cos": 0.6014,
+      "abstained": false,
+      "pool_scores": [
+        0.5043,
+        0.5844,
+        0.5904,
+        0.6014
+      ]
+    },
+    {
+      "segment": 38,
+      "scene": "office",
+      "seed": 31,
+      "chosen_cos": 0.5568,
+      "abstained": false,
+      "pool_scores": [
+        0.5568,
+        0.4824,
+        0.4793,
+        0.4875
+      ]
+    },
+    {
+      "segment": 39,
+      "scene": "office",
+      "seed": 32,
+      "chosen_cos": 0.6332,
+      "abstained": false,
+      "pool_scores": [
+        0.5389,
+        0.5184,
+        0.6332,
+        0.4846
+      ]
+    },
+    {
+      "segment": 40,
+      "scene": "desert_sunset",
+      "seed": 31,
+      "chosen_cos": 0.6569,
+      "abstained": false,
+      "pool_scores": [
+        0.5941,
+        0.6569,
+        0.5609,
+        0.6136
+      ]
+    },
+    {
+      "segment": 41,
+      "scene": "desert_sunset",
+      "seed": 32,
+      "chosen_cos": 0.655,
+      "abstained": false,
+      "pool_scores": [
+        0.655,
+        0.5069,
+        0.6135,
+        0.624
+      ]
+    },
+    {
+      "segment": 42,
+      "scene": "forest_fog",
+      "seed": 31,
+      "chosen_cos": 0.7317,
+      "abstained": false,
+      "pool_scores": [
+        0.6775,
+        0.6378,
+        0.6813,
+        0.7317
+      ]
+    },
+    {
+      "segment": 43,
+      "scene": "forest_fog",
+      "seed": 32,
+      "chosen_cos": 0.6838,
+      "abstained": false,
+      "pool_scores": [
+        0.6838,
+        0.6609,
+        0.64,
+        0.6655
+      ]
+    },
+    {
+      "segment": 44,
+      "scene": "crosswalk_evening",
+      "seed": 31,
+      "chosen_cos": 0.6626,
+      "abstained": false,
+      "pool_scores": [
+        0.6203,
+        0.6285,
+        0.6626,
+        0.6493
+      ]
+    },
+    {
+      "segment": 45,
+      "scene": "crosswalk_evening",
+      "seed": 32,
+      "chosen_cos": 0.6546,
+      "abstained": false,
+      "pool_scores": [
+        0.5984,
+        0.5744,
+        0.6546,
+        0.6008
+      ]
+    },
+    {
+      "segment": 46,
+      "scene": "rooftop_golden",
+      "seed": 31,
+      "chosen_cos": 0.6005,
+      "abstained": false,
+      "pool_scores": [
+        0.6005,
+        0.5861,
+        0.5809,
+        0.5584
+      ]
+    },
+    {
+      "segment": 47,
+      "scene": "rooftop_golden",
+      "seed": 32,
+      "chosen_cos": 0.5909,
+      "abstained": false,
+      "pool_scores": [
+        0.5821,
+        0.5909,
+        0.5454,
+        0.581
+      ]
+    }
+  ],
+  "combined_48": {
+    "quarter_means": [
+      0.6245,
+      0.6353,
+      0.6087,
+      0.6349
+    ],
+    "mean": 0.6258,
+    "min": 0.5238,
+    "pct_ge_0.5": 100.0
+  },
+  "aged_v2": {
+    "rows": [
+      {
+        "scene": "park",
+        "chosen_cos": 0.7251,
+        "abstained": false,
+        "pool_scores": [
+          0.5913,
+          0.7251,
+          0.6681,
+          0.6378
+        ]
+      },
+      {
+        "scene": "harbour",
+        "chosen_cos": 0.6546,
+        "abstained": false,
+        "pool_scores": [
+          0.6124,
+          0.5796,
+          0.6375,
+          0.6546
+        ]
+      },
+      {
+        "scene": "neon_night",
+        "chosen_cos": 0.6711,
+        "abstained": false,
+        "pool_scores": [
+          0.645,
+          0.5196,
+          0.6711,
+          0.5861
+        ]
+      },
+      {
+        "scene": "snow_village",
+        "chosen_cos": 0.6882,
+        "abstained": false,
+        "pool_scores": [
+          0.5724,
+          0.5795,
+          0.6294,
+          0.6882
+        ]
+      }
+    ],
+    "mean": 0.6847,
+    "min": 0.6546
+  },
+  "verdicts": {
+    "no_decay_q4_vs_q1": true,
+    "all_48_ge_0.5": true,
+    "aged_anchor_holds": true
+  }
+}

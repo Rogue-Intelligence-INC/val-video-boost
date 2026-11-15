@@ -42,6 +42,32 @@ class FaceID:
         face = max(faces, key=lambda f: (f.bbox[2] - f.bbox[0]) * (f.bbox[3] - f.bbox[1]))
         return [float(x) for x in face.normed_embedding]
 
+    def embeddings_all(self, image_path) -> list[dict]:
+        """All faces in the frame, sorted left-to-right by bbox centre.
+
+        Needed for multi-character frames: embedding() alone returns
+        only the largest face, which cannot attribute identities when
+        two characters share a scene."""
+        import cv2
+
+        img = cv2.imread(str(image_path))
+        if img is None:
+            return []
+        faces = self.app.get(img)
+        if not faces:
+            for size in ((320, 320), (1024, 1024), (480, 480)):
+                try:
+                    self.app.det_model.input_size = size
+                except Exception:
+                    break
+                faces = self.app.get(img)
+                if faces:
+                    break
+        out = [{"bbox": [float(v) for v in f.bbox],
+                "cx": float((f.bbox[0] + f.bbox[2]) / 2.0),
+                "embedding": [float(x) for x in f.normed_embedding]} for f in faces]
+        return sorted(out, key=lambda d: d["cx"])
+
     @staticmethod
     def cosine(a: list[float], b: list[float]) -> float:
         return round(sum(x * y for x, y in zip(a, b)), 4)

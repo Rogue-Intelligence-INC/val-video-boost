@@ -1,0 +1,35 @@
+{
+  "protocol": "flux-detailed-supply-v1",
+  "rows": [
+    {
+      "seed": 7,
+      "scene": "park",
+      "arcface_cos": 0.4397
+    },
+    {
+      "seed": 7,
+      "scene": "harbour",
+      "arcface_cos": 0.4189
+    },
+    {
+      "seed": 8,
+      "scene": "park",
+      "arcface_cos": 0.5187
+    },
+    {
+      "seed": 8,
+      "scene": "harbour",
+      "arcface_cos": 0.5246
+    }
+  ],
+  "mean_cos": 0.4755,
+  "min_cos": 0.4189,
+  "reference": {
+    "flux_short_baseline": 0.48,
+    "juggernaut_detailed_neg": 0.6102,
+    "juggernaut_short": 0.471
+  },
+  "verdicts": {
+    "flux_detailed_beats_flux_short": false
+  }
+}

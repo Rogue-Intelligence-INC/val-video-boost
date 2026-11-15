@@ -1,0 +1,74 @@
+{
+  "protocol": "dual-character-same-frame-v1",
+  "rows": [
+    {
+      "seed": 7,
+      "scene": "park",
+      "faces_found": 2,
+      "left_to_aria": 0.5131,
+      "left_to_sofia": 0.2331,
+      "right_to_sofia": 0.2082,
+      "right_to_aria": 0.5363,
+      "attribution_correct": false
+    },
+    {
+      "seed": 7,
+      "scene": "cafe",
+      "faces_found": 2,
+      "left_to_aria": 0.5131,
+      "left_to_sofia": 0.2331,
+      "right_to_sofia": 0.2082,
+      "right_to_aria": 0.5363,
+      "attribution_correct": false
+    },
+    {
+      "seed": 8,
+      "scene": "park",
+      "faces_found": 2,
+      "left_to_aria": 0.5654,
+      "left_to_sofia": 0.2632,
+      "right_to_sofia": 0.1471,
+      "right_to_aria": 0.4119,
+      "attribution_correct": false
+    },
+    {
+      "seed": 8,
+      "scene": "cafe",
+      "faces_found": 2,
+      "left_to_aria": 0.5654,
+      "left_to_sofia": 0.2632,
+      "right_to_sofia": 0.1471,
+      "right_to_aria": 0.4119,
+      "attribution_correct": false
+    },
+    {
+      "seed": 9,
+      "scene": "park",
+      "faces_found": 2,
+      "left_to_aria": 0.6442,
+      "left_to_sofia": 0.3563,
+      "right_to_sofia": 0.2772,
+      "right_to_aria": 0.6239,
+      "attribution_correct": false
+    },
+    {
+      "seed": 9,
+      "scene": "cafe",
+      "faces_found": 2,
+      "left_to_aria": 0.6442,
+      "left_to_sofia": 0.3563,
+      "right_to_sofia": 0.2772,
+      "right_to_aria": 0.6239,
+      "attribution_correct": false
+    }
+  ],
+  "summary": {
+    "frames": 6,
+    "two_faces": 6,
+    "attribution_correct": 0
+  },
+  "verdicts": {
+    "two_faces_majority": true,
+    "attribution_majority": false
+  }
+}

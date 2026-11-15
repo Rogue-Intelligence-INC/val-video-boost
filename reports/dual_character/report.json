@@ -1,0 +1,99 @@
+{
+  "protocol": "dual-character-separation-v1",
+  "rows": {
+    "aria": [
+      {
+        "seed": 7,
+        "scene": "park",
+        "cos_same_aria": 0.544,
+        "cos_cross_sofia": 0.3382
+      },
+      {
+        "seed": 7,
+        "scene": "harbour",
+        "cos_same_aria": 0.6054,
+        "cos_cross_sofia": 0.2409
+      },
+      {
+        "seed": 8,
+        "scene": "park",
+        "cos_same_aria": 0.5773,
+        "cos_cross_sofia": 0.3642
+      },
+      {
+        "seed": 8,
+        "scene": "harbour",
+        "cos_same_aria": 0.6427,
+        "cos_cross_sofia": 0.4305
+      },
+      {
+        "seed": 9,
+        "scene": "park",
+        "cos_same_aria": 0.5895,
+        "cos_cross_sofia": 0.275
+      },
+      {
+        "seed": 9,
+        "scene": "harbour",
+        "cos_same_aria": 0.7025,
+        "cos_cross_sofia": 0.4007
+      }
+    ],
+    "sofia": [
+      {
+        "seed": 7,
+        "scene": "park",
+        "cos_same_sofia": 0.7653,
+        "cos_cross_aria": 0.4937
+      },
+      {
+        "seed": 7,
+        "scene": "harbour",
+        "cos_same_sofia": 0.6301,
+        "cos_cross_aria": 0.3939
+      },
+      {
+        "seed": 8,
+        "scene": "park",
+        "cos_same_sofia": 0.5788,
+        "cos_cross_aria": 0.2895
+      },
+      {
+        "seed": 8,
+        "scene": "harbour",
+        "cos_same_sofia": 0.5214,
+        "cos_cross_aria": 0.2956
+      },
+      {
+        "seed": 9,
+        "scene": "park",
+        "cos_same_sofia": 0.71,
+        "cos_cross_aria": 0.3951
+      },
+      {
+        "seed": 9,
+        "scene": "harbour",
+        "cos_same_sofia": 0.6584,
+        "cos_cross_aria": 0.4169
+      }
+    ]
+  },
+  "summary": {
+    "aria": {
+      "same_mean": 0.6102,
+      "cross_mean": 0.3416,
+      "margin": 0.2687,
+      "cross_max": 0.4305
+    },
+    "sofia": {
+      "same_mean": 0.644,
+      "cross_mean": 0.3808,
+      "margin": 0.2632,
+      "cross_max": 0.4937
+    }
+  },
+  "verdicts": {
+    "both_margins_ge_0.10": true,
+    "cross_below_threshold": true
+  }
+}

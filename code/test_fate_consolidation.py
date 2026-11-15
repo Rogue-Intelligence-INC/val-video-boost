@@ -102,17 +102,49 @@ def main() -> None:
         del pipe
         torch.cuda.empty_cache()
 
+    # 7: later rounds, recorded (long chain / gaps filled 2026-11-15)
+    desc = fate.supply_desc("on a neon-lit street at night, waist-up, facing camera")
+    desc_pinned = (fi.IDENTITY_BLOCK in desc["prompt"]
+                   and desc["identity_fingerprint"] == supplies["park"]["identity_fingerprint"])
+
+    def load(rel):
+        p = ROOT / rel
+        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
+
+    lc = load("reports/fate_long_chain/report.json")
+    dual = load("reports/dual_character/report.json")
+    flux = load("reports/flux_detailed/report.json")
+    vid = load("reports/video_window_select/report.json")
+    p48 = load("reports/fate_pressure48/report.json")
+    sf2 = load("reports/dual_same_frame/report_v2.json")
+    i2v = load("reports/i2v_window/report.json")
+    gap_records = {
+        "long_chain_pass": bool(lc.get("verdicts", {}).get("LONG_CHAIN_PASS"))
+                           and lc.get("summary", {}).get("mean_cos", 0) >= 0.62,
+        "dual_character_separated": bool(dual.get("verdicts", {}).get("both_margins_ge_0.10")),
+        "flux_detailed_result_recorded": isinstance(flux.get("mean_cos"), (int, float)),
+        "video_gap_documented": (vid.get("w1", {}).get("self_score", {}).get("mean") or 0) >= 0.85
+                                and (vid.get("selected_mean") or 1) < 0.5,
+        "pressure48_no_decay": bool(p48.get("verdicts", {}).get("no_decay_q4_vs_q1"))
+                               and bool(p48.get("verdicts", {}).get("all_48_ge_0.5")),
+        "aged_anchor_switch_holds": bool(p48.get("verdicts", {}).get("aged_anchor_holds")),
+        "same_frame_compact_recorded": isinstance(sf2.get("summary", {}).get("attribution_correct"), int),
+        "i2v_cross_window_holds": bool(i2v.get("verdicts", {}).get("i2v_ge_0.5")),
+    }
+
     report = {"protocol": "fate-interface-consolidation-v1",
               "fingerprint": supplies["park"]["identity_fingerprint"],
               "recorded_pool_scores": scores, "smoke": smoke,
-              "route": route,
+              "route": route, "gap_records": gap_records,
               "verdicts": {"single_source_of_truth": single_source,
                            "verbatim_block_all_scenes": verbatim and one_fp,
+                           "supply_desc_pinned": desc_pinned,
                            "select_is_argmax_and_passes": select_ok,
                            "foreign_face_abstains": foreign_abstains,
                            "registry_has_fate_native_record": registry_ok,
                            "route_points_at_fate_stack": route_ok,
-                           "fresh_generation_selectable": smoke_ok}}
+                           "fresh_generation_selectable": smoke_ok,
+                           **gap_records}}
     (OUT / "report_consolidation.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
     print(json.dumps(report["verdicts"], ensure_ascii=False))

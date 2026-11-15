@@ -1,0 +1,40 @@
+{
+  "protocol": "dual-character-same-frame-v2-compact",
+  "prompt": "photorealistic photograph of two different women standing side by side in a sunlit park, waist-up, both facing camera: on the left Aria with chestnut-brown shoulder-length hair, hazel eyes, a mole on her left cheek, slim oval face; on the right Sofia with long platinum-blonde hair, blue eyes, pale skin, round face and full lips",
+  "rows": [
+    {
+      "seed": 7,
+      "faces_found": 2,
+      "left_to_aria": 0.4391,
+      "left_to_sofia": 0.3976,
+      "right_to_sofia": 0.4231,
+      "right_to_aria": 0.4262,
+      "attribution_correct": false
+    },
+    {
+      "seed": 8,
+      "faces_found": 2,
+      "left_to_aria": 0.3616,
+      "left_to_sofia": 0.2793,
+      "right_to_sofia": 0.334,
+      "right_to_aria": 0.3174,
+      "attribution_correct": true
+    },
+    {
+      "seed": 9,
+      "faces_found": 2,
+      "left_to_aria": 0.3746,
+      "left_to_sofia": 0.3371,
+      "right_to_sofia": 0.4048,
+      "right_to_aria": 0.2603,
+      "attribution_correct": true
+    }
+  ],
+  "summary": {
+    "frames": 3,
+    "attribution_correct": 2
+  },
+  "verdicts": {
+    "attribution_majority": true
+  }
+}

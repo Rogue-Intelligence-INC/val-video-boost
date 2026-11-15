@@ -1,0 +1,94 @@
+{
+  "protocol": "video-window-select-v1",
+  "model": "CogVideoX-2b",
+  "w1": {
+    "seconds": 42.51,
+    "anchor_frame": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\video_window_select\\w1_park\\frame_00.png",
+    "self_score": {
+      "samples": [
+        1.0,
+        0.7951,
+        0.9165,
+        0.8917,
+        null,
+        0.9655,
+        0.9132,
+        0.8451,
+        null
+      ],
+      "mean": 0.9039,
+      "faces": 7
+    }
+  },
+  "w2_takes": [
+    {
+      "take": 0,
+      "seed": 21,
+      "seconds": 25.05,
+      "samples": [
+        0.262,
+        0.2661,
+        0.2525,
+        0.2404,
+        0.2342,
+        0.2526,
+        0.2571,
+        0.2726,
+        0.2822
+      ],
+      "mean": 0.2577,
+      "faces": 9,
+      "folder": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\video_window_select\\w2_harbour_t0"
+    },
+    {
+      "take": 1,
+      "seed": 22,
+      "seconds": 25.48,
+      "samples": [
+        0.297,
+        0.2791,
+        0.2811,
+        0.2748,
+        0.2358,
+        0.2395,
+        0.2641,
+        0.1942,
+        0.221
+      ],
+      "mean": 0.2541,
+      "faces": 9,
+      "folder": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\video_window_select\\w2_harbour_t1"
+    },
+    {
+      "take": 2,
+      "seed": 23,
+      "seconds": 24.06,
+      "samples": [
+        0.0834,
+        0.0241,
+        0.0638,
+        0.0753,
+        0.0993,
+        0.1054,
+        0.0815,
+        0.1149,
+        0.0801
+      ],
+      "mean": 0.0809,
+      "faces": 9,
+      "folder": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\video_window_select\\w2_harbour_t2"
+    }
+  ],
+  "blind_first_take_mean": 0.2577,
+  "selected_take": 0,
+  "selected_mean": 0.2577,
+  "video_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\video_window_select\\aria_window_select.mp4",
+  "verdicts": {
+    "selected_beats_blind": false,
+    "selected_ge_0.5": false
+  },
+  "reference": {
+    "old_cross_window_seam_short_patch": 0.2211,
+    "within_take_single_film_49f": 0.9004
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "protocol": "fate-interface-long-chain-v1",
+  "anchor": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\context_diagnostic\\prompt_channel\\detailed_neg\\s7_studio.png",
+  "rows": [
+    {
+      "segment": 0,
+      "scene": "park_noon",
+      "seed": 21,
+      "pool_scores": [
+        0.5202,
+        0.5445,
+        0.4797,
+        0.5169
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg00_park_noon_s21_c1.png",
+      "chosen_cos": 0.5445,
+      "abstained": false,
+      "seconds": 13.0,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 1,
+      "scene": "park_noon",
+      "seed": 22,
+      "pool_scores": [
+        0.5316,
+        0.5866,
+        0.4915,
+        0.4973
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg01_park_noon_s22_c1.png",
+      "chosen_cos": 0.5866,
+      "abstained": false,
+      "seconds": 9.2,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 2,
+      "scene": "harbour_dusk",
+      "seed": 21,
+      "pool_scores": [
+        0.6378,
+        0.5701,
+        0.6457,
+        0.5977
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg02_harbour_dusk_s21_c2.png",
+      "chosen_cos": 0.6457,
+      "abstained": false,
+      "seconds": 9.2,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 3,
+      "scene": "harbour_dusk",
+      "seed": 22,
+      "pool_scores": [
+        0.6201,
+        0.5386,
+        0.5966,
+        0.5435
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg03_harbour_dusk_s22_c0.png",
+      "chosen_cos": 0.6201,
+      "abstained": false,
+      "seconds": 9.6,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 4,
+      "scene": "neon_night",
+      "seed": 21,
+      "pool_scores": [
+        0.5985,
+        0.6538,
+        0.7256,
+        0.6774
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg04_neon_night_s21_c2.png",
+      "chosen_cos": 0.7256,
+      "abstained": false,
+      "seconds": 9.3,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 5,
+      "scene": "neon_night",
+      "seed": 22,
+      "pool_scores": [
+        0.6584,
+        0.6477,
+        0.6727,
+        0.6828
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg05_neon_night_s22_c3.png",
+      "chosen_cos": 0.6828,
+      "abstained": false,
+      "seconds": 9.1,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 6,
+      "scene": "cafe_rain",
+      "seed": 21,
+      "pool_scores": [
+        0.5701,
+        0.6929,
+        0.5689,
+        0.5241
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg06_cafe_rain_s21_c1.png",
+      "chosen_cos": 0.6929,
+      "abstained": false,
+      "seconds": 9.1,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 7,
+      "scene": "cafe_rain",
+      "seed": 22,
+      "pool_scores": [
+        0.6403,
+        0.564,
+        0.5799,
+        0.5476
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg07_cafe_rain_s22_c0.png",
+      "chosen_cos": 0.6403,
+      "abstained": false,
+      "seconds": 9.4,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 8,
+      "scene": "beach_noon",
+      "seed": 21,
+      "pool_scores": [
+        0.5458,
+        0.4746,
+        0.4543,
+        0.4472
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg08_beach_noon_s21_c0.png",
+      "chosen_cos": 0.5458,
+      "abstained": false,
+      "seconds": 9.8,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 9,
+      "scene": "beach_noon",
+      "seed": 22,
+      "pool_scores": [
+        0.5792,
+        0.5599,
+        0.5521,
+        0.4882
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg09_beach_noon_s22_c0.png",
+      "chosen_cos": 0.5792,
+      "abstained": false,
+      "seconds": 9.8,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 10,
+      "scene": "snow_village",
+      "seed": 21,
+      "pool_scores": [
+        0.4438,
+        0.6004,
+        0.5558,
+        0.5925
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg10_snow_village_s21_c1.png",
+      "chosen_cos": 0.6004,
+      "abstained": false,
+      "seconds": 10.1,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 11,
+      "scene": "snow_village",
+      "seed": 22,
+      "pool_scores": [
+        0.6295,
+        0.5657,
+        0.585,
+        0.5875
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg11_snow_village_s22_c0.png",
+      "chosen_cos": 0.6295,
+      "abstained": false,
+      "seconds": 11.0,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 12,
+      "scene": "library",
+      "seed": 21,
+      "pool_scores": [
+        0.626,
+        0.4726,
+        0.5727,
+        0.513
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg12_library_s21_c0.png",
+      "chosen_cos": 0.626,
+      "abstained": false,
+      "seconds": 9.6,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 13,
+      "scene": "library",
+      "seed": 22,
+      "pool_scores": [
+        0.6713,
+        0.6482,
+        0.6115,
+        0.4867
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg13_library_s22_c0.png",
+      "chosen_cos": 0.6713,
+      "abstained": false,
+      "seconds": 9.6,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 14,
+      "scene": "office",
+      "seed": 21,
+      "pool_scores": [
+        0.4243,
+        0.5289,
+        0.5738,
+        0.5879
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg14_office_s21_c3.png",
+      "chosen_cos": 0.5879,
+      "abstained": false,
+      "seconds": 10.9,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 15,
+      "scene": "office",
+      "seed": 22,
+      "pool_scores": [
+        0.4722,
+        0.4684,
+        0.5696,
+        0.4678
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg15_office_s22_c2.png",
+      "chosen_cos": 0.5696,
+      "abstained": false,
+      "seconds": 10.2,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 16,
+      "scene": "desert_sunset",
+      "seed": 21,
+      "pool_scores": [
+        0.6008,
+        0.6311,
+        0.5469,
+        0.6179
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg16_desert_sunset_s21_c1.png",
+      "chosen_cos": 0.6311,
+      "abstained": false,
+      "seconds": 8.9,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 17,
+      "scene": "desert_sunset",
+      "seed": 22,
+      "pool_scores": [
+        0.6033,
+        0.5795,
+        0.5623,
+        0.5774
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg17_desert_sunset_s22_c0.png",
+      "chosen_cos": 0.6033,
+      "abstained": false,
+      "seconds": 9.2,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 18,
+      "scene": "forest_fog",
+      "seed": 21,
+      "pool_scores": [
+        0.6351,
+        0.5097,
+        0.6425,
+        0.6159
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg18_forest_fog_s21_c2.png",
+      "chosen_cos": 0.6425,
+      "abstained": false,
+      "seconds": 9.3,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 19,
+      "scene": "forest_fog",
+      "seed": 22,
+      "pool_scores": [
+        0.6521,
+        0.6817,
+        0.6382,
+        0.6016
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg19_forest_fog_s22_c1.png",
+      "chosen_cos": 0.6817,
+      "abstained": false,
+      "seconds": 9.3,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 20,
+      "scene": "crosswalk_evening",
+      "seed": 21,
+      "pool_scores": [
+        0.5647,
+        0.6251,
+        0.6477,
+        0.6854
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg20_crosswalk_evening_s21_c3.png",
+      "chosen_cos": 0.6854,
+      "abstained": false,
+      "seconds": 9.1,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 21,
+      "scene": "crosswalk_evening",
+      "seed": 22,
+      "pool_scores": [
+        0.6325,
+        0.6732,
+        0.6355,
+        0.6449
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg21_crosswalk_evening_s22_c1.png",
+      "chosen_cos": 0.6732,
+      "abstained": false,
+      "seconds": 9.2,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 22,
+      "scene": "rooftop_golden",
+      "seed": 21,
+      "pool_scores": [
+        0.5861,
+        0.4429,
+        0.5776,
+        0.5452
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg22_rooftop_golden_s21_c0.png",
+      "chosen_cos": 0.5861,
+      "abstained": false,
+      "seconds": 9.3,
+      "fingerprint": "85b017178926"
+    },
+    {
+      "segment": 23,
+      "scene": "rooftop_golden",
+      "seed": 22,
+      "pool_scores": [
+        0.6657,
+        0.5902,
+        0.5452,
+        0.5867
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\fate_long_chain\\pool\\seg23_rooftop_golden_s22_c0.png",
+      "chosen_cos": 0.6657,
+      "abstained": false,
+      "seconds": 9.1,
+      "fingerprint": "85b017178926"
+    }
+  ],
+  "summary": {
+    "mean_cos": 0.6299,
+    "min_cos": 0.5445,
+    "pct_ge_0.5": 100.0,
+    "first_half_mean": 0.6245,
+    "second_half_mean": 0.6353,
+    "abstentions": 0,
+    "segments": 24,
+    "pool_size": 4
+  },
+  "verdicts": {
+    "mean_ge_0.5": true,
+    "pct_ge_0.5_at_least_90": true,
+    "worst_ge_0.40": true,
+    "anchor_does_not_fade": true,
+    "LONG_CHAIN_PASS": true
+  },
+  "plugin_reference_extreme": {
+    "mean_cos": 0.5516,
+    "min_cos": 0.508,
+    "note": "IP-Adapter arm, reports/extreme/report.json"
+  }
+}

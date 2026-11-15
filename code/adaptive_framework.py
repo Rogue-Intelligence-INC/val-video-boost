@@ -127,6 +127,47 @@ def load_measured_registry() -> dict:
                 "fate_interface/report.json",
                 {"arm": "FateInterface supply+select best-of-4, no plugin/patch",
                  "min": s.get("select_min"), "pass_rate": s.get("select_pass_rate")})
+    lc = PROJECT / "reports" / "fate_long_chain" / "report.json"
+    if lc.exists():
+        d = json.loads(lc.read_text(encoding="utf-8"))
+        s = d.get("summary", {})
+        if s.get("mean_cos"):
+            add("juggernaut-xl-v9", "long_chain_identity_24seg_no_plugin", s["mean_cos"],
+                "fate_long_chain/report.json",
+                {"arm": "FateInterface supply_desc + best-of-4 select, no plugin/patch",
+                 "min": s.get("min_cos"), "verdict": d.get("verdicts", {}).get("LONG_CHAIN_PASS")})
+    dual = PROJECT / "reports" / "dual_character" / "report.json"
+    if dual.exists():
+        d = json.loads(dual.read_text(encoding="utf-8"))
+        s = d.get("summary", {})
+        if s.get("aria"):
+            add("juggernaut-xl-v9", "dual_character_separation_margin", s["aria"]["margin"],
+                "dual_character/report.json",
+                {"arm": "two detailed-supply characters, alternating scenes",
+                 "sofia_margin": s.get("sofia", {}).get("margin")})
+    fd = PROJECT / "reports" / "flux_detailed" / "report.json"
+    if fd.exists():
+        d = json.loads(fd.read_text(encoding="utf-8"))
+        if isinstance(d.get("mean_cos"), (int, float)):
+            add("flux1-schnell", "character_identity_detailed_supply", d["mean_cos"],
+                "flux_detailed/report.json",
+                {"arm": "detailed block (negative n/a at guidance 0); does NOT beat flux short 0.480"})
+    vw = PROJECT / "reports" / "video_window_select" / "report.json"
+    if vw.exists():
+        d = json.loads(vw.read_text(encoding="utf-8"))
+        if isinstance(d.get("selected_mean"), (int, float)):
+            add("CogVideoX-2b", "cross_window_selected_identity", d["selected_mean"],
+                "video_window_select/report.json",
+                {"arm": "3-take selection vs W1 anchor; KNOWN GAP: pool centred ~0.25, "
+                        "selection cannot rescue -- needs I2V pixel anchoring"})
+    i2v = PROJECT / "reports" / "i2v_window" / "report.json"
+    if i2v.exists():
+        d = json.loads(i2v.read_text(encoding="utf-8"))
+        if isinstance(d.get("selected_mean"), (int, float)):
+            add("CogVideoX-5b-I2V", "cross_window_identity_i2v", d["selected_mean"],
+                "i2v_window/report.json",
+                {"arm": "W2 started from W1 anchor frame (pixel anchor), Fate measures/selects",
+                 "note": "closes the T2V cross-window gap (0.258 -> 0.633)"})
     cd = PROJECT / "reports" / "context_diagnostic" / "report_L4.json"
     if cd.exists():
         d = json.loads(cd.read_text(encoding="utf-8"))

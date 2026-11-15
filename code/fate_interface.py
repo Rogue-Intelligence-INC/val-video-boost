@@ -65,6 +65,15 @@ class FateInterface:
                 "negative_prompt": NEGATIVE, "scene": scene,
                 "identity_fingerprint": fp}
 
+    def supply_desc(self, scene_desc: str) -> dict:
+        """Same pinned supply for a free-form scene description (long
+        chains, story segments): only the scene slot changes, the
+        identity block and fingerprint never do."""
+        spec = self.supply("park")
+        spec["prompt"] = f"photorealistic photograph of {IDENTITY_BLOCK}, {scene_desc}"
+        spec["scene"] = scene_desc
+        return spec
+
     # -- designated face -----------------------------------------------
     def enroll_face(self, image_path) -> bool:
         """Designate THE face. Returns False (abstains) if no face found."""

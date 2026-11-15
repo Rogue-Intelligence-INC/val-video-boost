@@ -56,6 +56,21 @@
         "pass_rate": 1.0
       },
       {
+        "task": "long_chain_identity_24seg_no_plugin",
+        "score": 0.6299,
+        "source": "fate_long_chain/report.json",
+        "arm": "FateInterface supply_desc + best-of-4 select, no plugin/patch",
+        "min": 0.5445,
+        "verdict": true
+      },
+      {
+        "task": "dual_character_separation_margin",
+        "score": 0.2687,
+        "source": "dual_character/report.json",
+        "arm": "two detailed-supply characters, alternating scenes",
+        "sofia_margin": 0.2632
+      },
+      {
         "task": "character_identity_detailed_supply",
         "score": 0.6102,
         "source": "context_diagnostic/report_L4.json",
@@ -63,13 +78,32 @@
       }
     ]
   },
+  "gap_records": {
+    "long_chain_pass": true,
+    "dual_character_separated": true,
+    "flux_detailed_result_recorded": true,
+    "video_gap_documented": true,
+    "pressure48_no_decay": true,
+    "aged_anchor_switch_holds": true,
+    "same_frame_compact_recorded": true,
+    "i2v_cross_window_holds": true
+  },
   "verdicts": {
     "single_source_of_truth": true,
     "verbatim_block_all_scenes": true,
+    "supply_desc_pinned": true,
     "select_is_argmax_and_passes": true,
     "foreign_face_abstains": true,
     "registry_has_fate_native_record": true,
     "route_points_at_fate_stack": true,
-    "fresh_generation_selectable": true
+    "fresh_generation_selectable": true,
+    "long_chain_pass": true,
+    "dual_character_separated": true,
+    "flux_detailed_result_recorded": true,
+    "video_gap_documented": true,
+    "pressure48_no_decay": true,
+    "aged_anchor_switch_holds": true,
+    "same_frame_compact_recorded": true,
+    "i2v_cross_window_holds": true
   }
 }

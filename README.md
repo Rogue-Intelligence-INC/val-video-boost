@@ -73,11 +73,21 @@ data/     identity_patch.json（身份 Triad 导出） + patches/（旧四体补
 reports/  long_video_character/（本轮视频/报告/对照图） + prior_*（旧实测存档）
 ```
 
-## 复现
+## 运行（巩固后的正式入口）
 
 ```powershell
 cd code
-C:\Ai\models\.venv-sd\Scripts\python.exe test_long_video_character.py
+# 无插件身份链一条命令：路由 → hero 登记 → 每段 K 候选 → Fate 选择 → τ 门 → manifest
+C:\Ai\models\.venv-sd\Scripts\python.exe run_pipeline.py
+C:\Ai\models\.venv-sd\Scripts\python.exe run_pipeline.py --scenes park,harbour,library --seeds 7,8 --k 4
+C:\Ai\models\.venv-sd\Scripts\python.exe run_pipeline.py --hero <同源hero图>   # 指定已有锚脸
+# 回归（16 项）与证据对表
+C:\Ai\models\.venv-sd\Scripts\python.exe test_fate_consolidation.py
 ```
+
+产物：`reports/pipeline_run/manifest.json`（每段全候选分数、指纹、
+选中帧与 ACCEPTED/ABSTAINED 状态）+ `contact_sheet.png`。
+退出码 0 = 无弃权段。产品介绍见 [docs/PRODUCT_INTRO.md](./docs/PRODUCT_INTRO.md)，
+全实验总结见 [docs/EXPERIMENT_SUMMARY.md](./docs/EXPERIMENT_SUMMARY.md)。
 
 *Rogue Intelligence INC. · Proprietary*

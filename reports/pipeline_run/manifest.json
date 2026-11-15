@@ -1,0 +1,113 @@
+{
+  "protocol": "fate-pipeline-run-v1",
+  "route": {
+    "task": "identity_no_plugin",
+    "model": "juggernaut-xl-v9",
+    "rationale": "FateInterface: pinned detailed supply + negative facts, best-of-4 select against the enrolled hero, tau=0.5 abstention; measured 0.657 (min 0.603, 6/6 pass), no plugin, no patch -- fictional characters only",
+    "measured_records": [
+      {
+        "task": "character_identity_arcface",
+        "score": 0.5823,
+        "source": "report_ipface.json",
+        "arm": "ip_face_triad",
+        "note": "best measured identity channel"
+      },
+      {
+        "task": "character_identity_arcface_baseline",
+        "score": 0.471,
+        "source": "report_ipface.json"
+      },
+      {
+        "task": "character_identity_gate_tuned",
+        "score": 0.6199,
+        "source": "report_gate_scale.json",
+        "arm": "ip_gate_uniform_0.30",
+        "note": "mid+up gate, total strength 0.30"
+      },
+      {
+        "task": "long_chain_identity_24seg",
+        "score": 0.5516,
+        "source": "extreme/report.json",
+        "min": 0.508,
+        "anchor_fade": "none measured"
+      },
+      {
+        "task": "character_identity_fate_native",
+        "score": 0.6566,
+        "source": "fate_interface/report.json",
+        "arm": "FateInterface supply+select best-of-4, no plugin/patch",
+        "min": 0.6031,
+        "pass_rate": 1.0
+      },
+      {
+        "task": "long_chain_identity_24seg_no_plugin",
+        "score": 0.6299,
+        "source": "fate_long_chain/report.json",
+        "arm": "FateInterface supply_desc + best-of-4 select, no plugin/patch",
+        "min": 0.5445,
+        "verdict": true
+      },
+      {
+        "task": "dual_character_separation_margin",
+        "score": 0.2687,
+        "source": "dual_character/report.json",
+        "arm": "two detailed-supply characters, alternating scenes",
+        "sofia_margin": 0.2632
+      },
+      {
+        "task": "character_identity_detailed_supply",
+        "score": 0.6102,
+        "source": "context_diagnostic/report_L4.json",
+        "arm": "detailed pinned block + bible negatives, single draw"
+      }
+    ]
+  },
+  "k": 4,
+  "tau": 0.5,
+  "segments": [
+    {
+      "segment": 0,
+      "seed": 7,
+      "scene": "park",
+      "fingerprint": "85b017178926",
+      "pool_scores": [
+        0.5748,
+        0.5468,
+        0.6061,
+        0.5531
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\pipeline_run\\pool\\seg00_s7_park_c2.png",
+      "chosen_cos": 0.6061,
+      "status": "ACCEPTED",
+      "verify_passed": true
+    },
+    {
+      "segment": 1,
+      "seed": 7,
+      "scene": "harbour",
+      "fingerprint": "85b017178926",
+      "pool_scores": [
+        0.594,
+        0.6296,
+        0.6125,
+        0.5245
+      ],
+      "chosen": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\pipeline_run\\pool\\seg01_s7_harbour_c1.png",
+      "chosen_cos": 0.6296,
+      "status": "ACCEPTED",
+      "verify_passed": true
+    }
+  ],
+  "anchor": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\pipeline_run\\hero_studio.png",
+  "summary": {
+    "segments": 2,
+    "accepted": 2,
+    "abstained": 0,
+    "mean_cos": 0.6179,
+    "min_cos": 0.6061,
+    "identity_fingerprints": [
+      "85b017178926"
+    ]
+  },
+  "contact_sheet": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\pipeline_run\\contact_sheet.png"
+}

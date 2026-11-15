@@ -1,0 +1,57 @@
+{
+  "protocol": "i2v-cross-window-v1",
+  "model": "CogVideoX-5b-I2V",
+  "start_image": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\video_window_select\\w1_park\\frame_00.png",
+  "takes": [
+    {
+      "take": 0,
+      "seed": 21,
+      "seconds": 0.0,
+      "samples": [
+        null,
+        null,
+        0.5143,
+        0.6218,
+        0.611,
+        0.605,
+        0.5831,
+        0.595,
+        0.5897
+      ],
+      "mean": 0.5886,
+      "faces": 7
+    },
+    {
+      "take": 1,
+      "seed": 22,
+      "seconds": 0.0,
+      "samples": [
+        null,
+        0.8046,
+        0.6587,
+        0.5997,
+        0.5899,
+        0.6074,
+        0.587,
+        0.607,
+        0.6093
+      ],
+      "mean": 0.633,
+      "faces": 8
+    }
+  ],
+  "selected_mean": 0.633,
+  "selected_take": 1,
+  "video_file": "C:\\Ai\\rogue-products\\val-video-boost\\reports\\i2v_window\\aria_i2v_window.mp4",
+  "reference": {
+    "t2v_takes_mean": [
+      0.2577,
+      0.2541,
+      0.0809
+    ]
+  },
+  "verdicts": {
+    "i2v_beats_t2v_pool": true,
+    "i2v_ge_0.5": true
+  }
+}
