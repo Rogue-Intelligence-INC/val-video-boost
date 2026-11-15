@@ -1,0 +1,19 @@
+# Valhalla Fate consistency stack -- runtime deps (versions = the
+# measured-good set on the reference machine, RTX 4090 / Win11).
+# torch is installed separately by install.ps1 from the CUDA 12.8 index.
+diffusers==0.42.1
+transformers==5.21.1
+accelerate==1.15.0
+huggingface-hub>=0.30
+safetensors==0.8.0
+insightface==2.1
+onnxruntime==1.32.0
+opencv-python>=4.10
+imageio==2.38.1
+imageio-ffmpeg==0.8.1
+fastapi==0.163.1
+uvicorn[standard]==0.54.0
+pydantic>=2.10
+pillow>=11.0
+numpy>=2.0
+# competitor benchmark only (ConsisID head-to-head): consisid_eva_clip

@@ -73,11 +73,24 @@ data/     identity_patch.json（身份 Triad 导出） + patches/（旧四体补
 reports/  long_video_character/（本轮视频/报告/对照图） + prior_*（旧实测存档）
 ```
 
+## 安装与运行（公开发布准备版）
+
+```powershell
+.\install.ps1            # 建 venv → CUDA torch → 依赖 → doctor 自检（须全绿）
+cd code
+..\.venv\Scripts\python.exe doctor.py
+# 无插件身份链一条命令：路由 → hero 登记 → 每段 K 候选 → Fate 选择 → τ 门 → manifest
+..\.venv\Scripts\python.exe run_pipeline.py
+# API 服务（可选 FATE_API_KEY 鉴权）：health/route/supply/enroll/verify/select/run
+..\.venv\Scripts\python.exe fate_service.py     # http://127.0.0.1:8790/health
+```
+
+发布门槛与未达标清单见 [docs/LAUNCH.md](./docs/LAUNCH.md)（未清零前只做邀请制可用）。
+
 ## 运行（巩固后的正式入口）
 
 ```powershell
 cd code
-# 无插件身份链一条命令：路由 → hero 登记 → 每段 K 候选 → Fate 选择 → τ 门 → manifest
 C:\Ai\models\.venv-sd\Scripts\python.exe run_pipeline.py
 C:\Ai\models\.venv-sd\Scripts\python.exe run_pipeline.py --scenes park,harbour,library --seeds 7,8 --k 4
 C:\Ai\models\.venv-sd\Scripts\python.exe run_pipeline.py --hero <同源hero图>   # 指定已有锚脸

@@ -417,7 +417,24 @@ route("identity_no_plugin")   从实测注册表取模型/设置并写入 manife
 视频侧同构流程已分段验证（单 take 生成 → I2V 以锚帧续窗 →
 采样帧对锚打分，§16），尚未并入本入口，属下一轮。
 
-## 18. 复现
+## 18. 公开发布准备（2026-11-15，进行中）
+
+按所有者“按公开发布一步到位”的决策推进，三条线（清单与
+未达标项见 `docs/LAUNCH.md`，未清零前只做邀请制可用）：
+
+- **API 服务化 ✅**：`code/fate_service.py`（FastAPI）六类端点
+  （health/route/supply/enroll/verify/select/run），可选 API Key；
+  本机实活验证全端点通过，select 读数与管线 manifest 逐位一致。
+- **安装打包 ✅**：`install.ps1` + `requirements.txt` + `.env.example`
+  + 配置外置 `fate_config.py`；`code/doctor.py` 环境自检参考机
+  全绿（17 项含 GPU/VRAM/三模型/ArcFace/ffmpeg）。
+- **竞品同台 ⏳**：与参考注入机制（IP）的同台对表已完成三轮；
+  命名竞品 ConsisID（指定脸生视频，权重 25.1GB 已下载、脚本已备）
+  2026-11-15 本机尝试 45 分钟未出首条（offload 搬运瓶颈）已止损，
+  改夜间长跑/云端 GPU；其本地时效与我方 I2V 约 6 分钟/条的对比
+  本身记入 `docs/LAUNCH.md`。
+
+## 19. 复现
 
 ```powershell
 cd C:\Ai\rogue-products\val-video-boost\code
