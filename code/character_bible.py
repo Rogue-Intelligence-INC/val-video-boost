@@ -30,43 +30,47 @@ from __future__ import annotations
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
-EXPORT_EXE = Path(r"C:\Ai\Valhalla-main\target\release\valhalla_model_export.exe")
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import settings
+
 TOKEN_RE = re.compile(r"[a-z0-9]+")
 
-# Identity core: one fact per line, exactly the lines exported to the patch.
-IDENTITY_A = {
-    "name": "Aria",
-    "lines": [
-        "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
-        "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
-        "Aria has a slim oval face with a straight nose and natural makeup.",
-        "Aria's hair is always chestnut brown, never blonde and never black.",
-        "Aria is the same single person in every scene and every segment.",
-    ],
-    "prompt_fragment": (
-        "the same 28-year-old woman Aria with shoulder-length chestnut brown hair, "
-        "a small mole on her left cheek, hazel eyes, fair skin"
-    ),
-    # Consolidated supply (2026-11-15, context diagnostic L4/L5): the
-    # identity as one-fact-per-line facts merged into a detailed block.
-    # This string is PINNED -- it must be delivered byte-identically in
-    # every segment; paraphrasing it measured -0.083 ArcFace. The short
-    # prompt_fragment above is kept only as the historical baseline.
-    "detailed_block": (
-        "the same single woman Aria, 28 years old, shoulder-length chestnut brown "
-        "hair with a center parting, small mole on her left cheek, hazel eyes, "
-        "fair skin, slim oval face, high cheekbones, straight nose, dark brown "
-        "eyebrows, natural pink lips, small chin"
-    ),
-    # The bible's explicit negative facts, delivered as negative prompt
-    # (measured: only helpful on top of the detailed block, harmful alone).
-    "negative_facts": (
-        "blonde hair, black hair, grey hair, different person, another woman, "
-        "changing face, beard, masculine features"
-    ),
-}
+# Legacy compatibility: IDENTITY_A is now loaded from characters/aria.json
+# This ensures backward compatibility for code that imports IDENTITY_A
+try:
+    from character_loader import load_default_character, get_identity_a
+    _default_char = load_default_character()
+    IDENTITY_A = get_identity_a(_default_char)
+except Exception:
+    # Fallback if character files are not set up yet
+    IDENTITY_A = {
+        "name": "Aria",
+        "lines": [
+            "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+            "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+            "Aria has a slim oval face with a straight nose and natural makeup.",
+            "Aria's hair is always chestnut brown, never blonde and never black.",
+            "Aria is the same single person in every scene and every segment.",
+        ],
+        "prompt_fragment": (
+            "the same 28-year-old woman Aria with shoulder-length chestnut brown hair, "
+            "a small mole on her left cheek, hazel eyes, fair skin"
+        ),
+        "detailed_block": (
+            "the same single woman Aria, 28 years old, shoulder-length chestnut brown "
+            "hair with a center parting, small mole on her left cheek, hazel eyes, "
+            "fair skin, slim oval face, high cheekbones, straight nose, dark brown "
+            "eyebrows, natural pink lips, small chin"
+        ),
+        "negative_facts": (
+            "blonde hair, black hair, grey hair, different person, another woman, "
+            "changing face, beard, masculine features"
+        ),
+    }
+
 IDENTITY_B_NEGATIVE = (
     "a 45-year-old man with a short grey beard, receding hairline, dark brown eyes, olive skin"
 )
@@ -173,10 +177,11 @@ class Bible:
 def export_identity_patch(out_json: Path, lines: list[str] | None = None) -> Path:
     """Export the pinned identity core as a Triad patch (Fate Hub/Tile/
     StemCell fused by valhalla_model_export, consumed as-is)."""
+    export_exe = settings.require_valhalla_export_exe()
     corpus = Path(out_json).with_suffix(".corpus.txt")
     corpus.write_text("\n".join(lines or IDENTITY_A["lines"]) + "\n", encoding="utf-8")
     proc = subprocess.run(
-        [str(EXPORT_EXE), "--body", "triad", "--mode", "normalized_f64",
+        [str(export_exe), "--body", "triad", "--mode", "normalized_f64",
          "--experiment", "--corpus-file", str(corpus)],
         capture_output=True, text=True, timeout=600,
     )

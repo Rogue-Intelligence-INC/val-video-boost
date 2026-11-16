@@ -27,7 +27,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-import fate_config as cfg
+import settings
+from character_loader import list_characters, load_character
 
 from fastapi import FastAPI, Header, HTTPException, Request
 from pydantic import BaseModel
@@ -36,7 +37,7 @@ import adaptive_framework as af
 from fate_interface import FateInterface
 
 app = FastAPI(title="Valhalla Fate Consistency Service", version="1.0.0")
-_fate = FateInterface(tau=cfg.TAU)
+_fate = FateInterface(tau=settings.TAU)
 _pipe = None
 _lock = threading.Lock()
 
@@ -52,8 +53,8 @@ def _pipe_get():
 
 @app.middleware("http")
 async def api_key_guard(request: Request, call_next):
-    if cfg.API_KEY and request.url.path.startswith("/v1"):
-        if request.headers.get("x-api-key") != cfg.API_KEY:
+    if settings.API_KEY and request.url.path.startswith("/v1"):
+        if request.headers.get("x-api-key") != settings.API_KEY:
             from fastapi.responses import JSONResponse
             return JSONResponse({"detail": "invalid or missing X-API-Key"}, status_code=401)
     return await call_next(request)
@@ -62,6 +63,7 @@ async def api_key_guard(request: Request, call_next):
 class SupplyReq(BaseModel):
     scene: str | None = None
     scene_desc: str | None = None
+    character_id: str | None = None
 
 
 class PathReq(BaseModel):
@@ -78,13 +80,20 @@ class RunReq(BaseModel):
     k: int = 4
     hero: str | None = None
     out: str | None = None
+    character_id: str | None = None
 
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "service": "fate-consistency", "config": cfg.describe(),
-            "anchor_enrolled": _fate.anchor_path is not None,
-            "anchor": str(_fate.anchor_path) if _fate.anchor_path else None}
+    return {
+        "status": "ok",
+        "service": "fate-consistency",
+        "config": settings.describe(),
+        "anchor_enrolled": _fate.anchor_path is not None,
+        "anchor": str(_fate.anchor_path) if _fate.anchor_path else None,
+        "available_characters": list_characters(),
+        "current_character": _fate.character.id if _fate.character else None,
+    }
 
 
 @app.get("/v1/route")
@@ -94,9 +103,14 @@ def route(task: str = "identity_no_plugin"):
 
 @app.post("/v1/supply")
 def supply(req: SupplyReq):
+    # Allow switching character for this request
+    fate = _fate
+    if req.character_id:
+        fate = FateInterface(character_id=req.character_id, tau=settings.TAU)
+    
     if req.scene_desc:
-        return _fate.supply_desc(req.scene_desc)
-    return _fate.supply(req.scene or "park")
+        return fate.supply_desc(req.scene_desc)
+    return fate.supply(req.scene or "park")
 
 
 @app.post("/v1/enroll")
@@ -128,42 +142,60 @@ def run(req: RunReq):
 
     with _lock:
         pipe = _pipe_get()
-        out = Path(req.out) if req.out else cfg.PIPELINE_OUT
+        out = Path(req.out) if req.out else settings.PIPELINE_OUT
         out.mkdir(parents=True, exist_ok=True)
-        fate = FateInterface(tau=cfg.TAU)
+        fate = FateInterface(tau=settings.TAU, character_id=req.character_id)
+        
+        # Use character's scenes or fallback to default scenes
+        scene_text = fate.character.scenes if fate.character else rp.SCENE_TEXT
+        
         hero_path = Path(req.hero) if req.hero else out / "hero_studio.png"
         if not req.hero:
-            rp.gen(pipe, fate.supply("studio"), hero_path, req.seeds[0])
+            # Use first available scene or 'studio' for hero
+            hero_scene = "studio" if "studio" in scene_text else list(scene_text.keys())[0]
+            rp.gen(pipe, fate.supply(hero_scene), hero_path, req.seeds[0])
         if not fate.enroll_face(hero_path):
             raise HTTPException(422, "no face detectable in hero; run abstained")
         segments, chosen = [], [hero_path]
         seg = 0
         for seed in req.seeds:
             for scene in req.scenes:
-                spec = fate.supply_desc(rp.SCENE_TEXT.get(scene, scene))
+                # Get scene description from character or use as-is
+                if fate.character and fate.character.has_scene(scene):
+                    scene_desc = fate.character.get_scene(scene)
+                else:
+                    scene_desc = scene_text.get(scene, scene)
+                
+                spec = fate.supply_desc(scene_desc)
                 pool = []
                 for k in range(req.k):
                     p = out / "pool" / f"seg{seg:02d}_s{seed}_{scene}_c{k}.png"
                     rp.gen(pipe, spec, p, 70000 + seg * 100 + k)
                     pool.append(p)
                 picked = fate.select(pool)
-                segments.append({"segment": seg, "seed": seed, "scene": scene,
-                                 "fingerprint": spec["identity_fingerprint"],
-                                 "pool_scores": [s["cos"] for s in picked["scores"]],
-                                 "chosen": picked["chosen"], "chosen_cos": picked["chosen_cos"],
-                                 "status": "ABSTAINED" if picked["abstained"] else "ACCEPTED"})
+                segments.append({
+                    "segment": seg, "seed": seed, "scene": scene,
+                    "fingerprint": spec["identity_fingerprint"],
+                    "character_id": spec.get("character_id"),
+                    "pool_scores": [s["cos"] for s in picked["scores"]],
+                    "chosen": picked["chosen"], "chosen_cos": picked["chosen_cos"],
+                    "status": "ABSTAINED" if picked["abstained"] else "ACCEPTED"
+                })
                 if picked["chosen"]:
                     chosen.append(Path(picked["chosen"]))
                 seg += 1
         ok = [s["chosen_cos"] for s in segments if s["chosen_cos"] is not None]
-        summary = {"segments": len(segments),
-                   "accepted": sum(1 for s in segments if s["status"] == "ACCEPTED"),
-                   "abstained": sum(1 for s in segments if s["status"] == "ABSTAINED"),
-                   "mean_cos": round(sum(ok) / len(ok), 4) if ok else None,
-                   "min_cos": min(ok) if ok else None}
+        summary = {
+            "segments": len(segments),
+            "accepted": sum(1 for s in segments if s["status"] == "ACCEPTED"),
+            "abstained": sum(1 for s in segments if s["status"] == "ABSTAINED"),
+            "mean_cos": round(sum(ok) / len(ok), 4) if ok else None,
+            "min_cos": min(ok) if ok else None,
+            "character_id": fate.character.id if fate.character else None,
+        }
         return {"anchor": str(hero_path), "summary": summary, "segments": segments}
 
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host=cfg.HOST, port=cfg.PORT)
+    uvicorn.run(app, host=settings.HOST, port=settings.PORT)

@@ -29,10 +29,12 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import character_bible as cb
+from character_loader import Character, load_character, load_default_character
 from face_id import FaceID
 
+# Backward compatibility: default to Aria
 # Single source of truth: the pinned identity block and the negative
-# facts live in the bible (character_bible.IDENTITY_A). This module
+# facts now come from character data files. This module
 # only re-exports them; never reword a copy here (L5: -0.083 if the
 # block is paraphrased per segment).
 IDENTITY_BLOCK = cb.IDENTITY_A["detailed_block"]
@@ -45,11 +47,49 @@ SCENES = {
 
 
 class FateInterface:
-    def __init__(self, fid: FaceID | None = None, tau: float = 0.5):
+    def __init__(
+        self,
+        fid: FaceID | None = None,
+        tau: float = 0.5,
+        character: Character | None = None,
+        character_id: str | None = None,
+    ):
+        """Initialize FateInterface with optional character.
+
+        Args:
+            fid: FaceID instance (default: create new)
+            tau: Abstention threshold (default: 0.5)
+            character: Character object (default: load aria)
+            character_id: Character ID to load (overrides character parameter)
+        """
         self.fid = fid or FaceID()
         self.tau = tau
         self.anchor_emb = None
         self.anchor_path: Path | None = None
+
+        # Load character
+        if character_id is not None:
+            self.character = load_character(character_id)
+        elif character is not None:
+            self.character = character
+        else:
+            # Default to aria for backward compatibility
+            try:
+                self.character = load_default_character()
+            except Exception:
+                # Fallback if character files not available
+                self.character = None
+
+        # Update identity and scenes from character
+        if self.character:
+            self.identity_block = self.character.identity["detailed_block"]
+            self.negative_facts = self.character.identity["negative_facts"]
+            self.scenes = self.character.scenes
+        else:
+            # Fallback to legacy values
+            self.identity_block = IDENTITY_BLOCK
+            self.negative_facts = NEGATIVE
+            self.scenes = SCENES
 
     # -- context supply ------------------------------------------------
     def supply(self, scene: str) -> dict:
@@ -60,19 +100,35 @@ class FateInterface:
         delivered byte-identically in every segment."""
         import hashlib
 
-        fp = hashlib.sha256(IDENTITY_BLOCK.encode("utf-8")).hexdigest()[:12]
-        return {"prompt": f"photorealistic photograph of {IDENTITY_BLOCK}, {SCENES[scene]}",
-                "negative_prompt": NEGATIVE, "scene": scene,
-                "identity_fingerprint": fp}
+        if scene not in self.scenes:
+            available = ", ".join(self.scenes.keys())
+            raise KeyError(
+                f"Scene '{scene}' not found. Available scenes: {available}"
+            )
+
+        fp = hashlib.sha256(self.identity_block.encode("utf-8")).hexdigest()[:12]
+        return {
+            "prompt": f"photorealistic photograph of {self.identity_block}, {self.scenes[scene]}",
+            "negative_prompt": self.negative_facts,
+            "scene": scene,
+            "identity_fingerprint": fp,
+            "character_id": self.character.id if self.character else None,
+        }
 
     def supply_desc(self, scene_desc: str) -> dict:
         """Same pinned supply for a free-form scene description (long
         chains, story segments): only the scene slot changes, the
         identity block and fingerprint never do."""
-        spec = self.supply("park")
-        spec["prompt"] = f"photorealistic photograph of {IDENTITY_BLOCK}, {scene_desc}"
-        spec["scene"] = scene_desc
-        return spec
+        import hashlib
+
+        fp = hashlib.sha256(self.identity_block.encode("utf-8")).hexdigest()[:12]
+        return {
+            "prompt": f"photorealistic photograph of {self.identity_block}, {scene_desc}",
+            "negative_prompt": self.negative_facts,
+            "scene": scene_desc,
+            "identity_fingerprint": fp,
+            "character_id": self.character.id if self.character else None,
+        }
 
     # -- designated face -----------------------------------------------
     def enroll_face(self, image_path) -> bool:

@@ -1,0 +1,27 @@
+{
+  "id": "aria",
+  "name": "Aria",
+  "identity": {
+    "lines": [
+      "Aria is a 28-year-old woman with shoulder-length chestnut brown hair.",
+      "Aria has a small mole on her left cheek and hazel eyes and fair skin.",
+      "Aria has a slim oval face with a straight nose and natural makeup.",
+      "Aria's hair is always chestnut brown, never blonde and never black.",
+      "Aria is the same single person in every scene and every segment."
+    ],
+    "prompt_fragment": "the same 28-year-old woman Aria with shoulder-length chestnut brown hair, a small mole on her left cheek, hazel eyes, fair skin",
+    "detailed_block": "the same single woman Aria, 28 years old, shoulder-length chestnut brown hair with a center parting, small mole on her left cheek, hazel eyes, fair skin, slim oval face, high cheekbones, straight nose, dark brown eyebrows, natural pink lips, small chin",
+    "negative_facts": "blonde hair, black hair, grey hair, different person, another woman, changing face, beard, masculine features"
+  },
+  "scenes": {
+    "studio": "close-up portrait, studio light, plain grey background, facing camera",
+    "park": "standing outdoors in a sunlit park, natural daylight, waist-up, facing camera",
+    "harbour": "at a quiet harbour at dusk, sea breeze, waist-up, facing camera"
+  },
+  "metadata": {
+    "description": "Female protagonist, 28 years old. Original default character from character_bible.py.",
+    "tags": ["protagonist", "female", "modern"],
+    "created": "2026-11-16",
+    "version": "1.0"
+  }
+}

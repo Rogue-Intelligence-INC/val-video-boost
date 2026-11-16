@@ -63,24 +63,71 @@ profile / plan / calibrate / route），实测：`code/test_adaptive_framework.p
 ## 布局
 
 ```
-code/     module_patch.py / bridge.py / download.py（拷贝自 val-videopic-fusion）
-          character_bible.py  圣经+图边+冲突+抓取+身份补丁导出（新）
-          video_boost.py      验证门/阶梯/账本 = BOOST 算子视频版（新）
-          test_long_video_character.py  超长上下文人物一致性实测（新）
-          test_*.py           拷贝的旧测试线
-docs/     DESIGN.md（全套映射与裁定） + boost/（LLM-BOOST 原分析文档）
-data/     identity_patch.json（身份 Triad 导出） + patches/（旧四体补丁）
-reports/  long_video_character/（本轮视频/报告/对照图） + prior_*（旧实测存档）
+code/         主要代码目录
+  settings.py                 集中配置管理（环境变量、路径解析）
+  character_loader.py         角色数据加载器（支持多角色）
+  fate_interface.py           Fate 接口（无插件身份栈）
+  run_pipeline.py             命令行管道入口
+  fate_service.py             FastAPI 服务
+  doctor.py                   环境自检与配置诊断
+  module_patch.py / bridge.py / download.py  （拷贝自 val-videopic-fusion）
+  character_bible.py          圣经+图边+冲突+抓取+身份补丁导出
+  video_boost.py              验证门/阶梯/账本 = BOOST 算子视频版
+  test_*.py                   测试线（包括新增单元测试）
+
+characters/   角色定义文件（JSON/YAML）
+  aria.json                   默认角色 Aria（28 岁女性主角）
+  # 新角色可在此添加，格式见 code/character_loader.py 文档
+
+docs/         文档
+  DESIGN.md                   全套映射与裁定
+  LAUNCH.md                   发布清单与运行手册
+  boost/                      LLM-BOOST 原分析文档
+
+data/         补丁数据
+  identity_patch.json         身份 Triad 导出
+  patches/                    旧四体补丁
+
+reports/      实测报告与输出
+  long_video_character/       本轮视频/报告/对照图
+  pipeline_run/               管道运行输出（manifest + contact sheet）
+  prior_*                     旧实测存档
 ```
 
 ## 安装与运行（公开发布准备版）
 
+### 配置（必须先配置环境变量）
+
+```powershell
+# 复制配置模板
+copy .env.example .env
+
+# 编辑 .env 文件设置以下必需项：
+# - VAL_MODELS_ROOT: 模型权重目录（如 C:\Ai\models）
+# - VAL_VALHALLA_ROOT: Valhalla-main 仓库路径（如 C:\Ai\Valhalla-main）
+#   （或分别设置 VAL_VALHALLA_EXE、VAL_VALHALLA_EXPORT_EXE、VAL_VALHALLA_ENCODE）
+```
+
+### 安装与自检
+
 ```powershell
 .\install.ps1            # 建 venv → CUDA torch → 依赖 → doctor 自检（须全绿）
 cd code
-..\.venv\Scripts\python.exe doctor.py
+..\.venv\Scripts\python.exe doctor.py  # 查看完整配置和缺失项
+```
+
+### 运行管道
+
+```powershell
 # 无插件身份链一条命令：路由 → hero 登记 → 每段 K 候选 → Fate 选择 → τ 门 → manifest
 ..\.venv\Scripts\python.exe run_pipeline.py
+
+# 查看可用角色
+..\.venv\Scripts\python.exe run_pipeline.py --list-characters
+
+# 使用特定角色运行
+..\.venv\Scripts\python.exe run_pipeline.py --character aria --scenes park,harbour,library --seeds 7,8
+
 # API 服务（可选 FATE_API_KEY 鉴权）：health/route/supply/enroll/verify/select/run
 ..\.venv\Scripts\python.exe fate_service.py     # http://127.0.0.1:8790/health
 ```

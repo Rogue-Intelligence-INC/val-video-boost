@@ -46,21 +46,67 @@
 
 ## 4. 运行手册（参考机已验证流程）
 
-```powershell
-# 安装（新机器）
-.\install.ps1                                   # 含 doctor 自检
-# 环境变量（按需）
-$env:VAL_MODELS_ROOT="C:\Ai\models"; $env:FATE_API_KEY="change-me"
+### 4.1 配置环境（首次安装必做）
 
-cd code
-..\.venv\Scripts\python.exe doctor.py           # 全绿再往下
-..\.venv\Scripts\python.exe run_pipeline.py --scenes park,harbour,library --seeds 7,8
-..\.venv\Scripts\python.exe fate_service.py     # http://127.0.0.1:8790/health
-..\.venv\Scripts\python.exe test_fate_consolidation.py   # 发布前回归，16 项须全过
+```powershell
+# 1. 复制配置模板
+copy .env.example .env
+
+# 2. 编辑 .env 文件，设置必需项：
+#    - VAL_MODELS_ROOT: 模型权重根目录（如 C:\Ai\models）
+#    - VAL_VALHALLA_ROOT: Valhalla-main 仓库路径（如 C:\Ai\Valhalla-main）
+#      或分别设置：
+#        VAL_VALHALLA_EXE, VAL_VALHALLA_EXPORT_EXE, VAL_VALHALLA_ENCODE
+#
+# 参考机快速配置（Windows + RTX 4090 所有者）：
+#   VAL_MODELS_ROOT=C:\Ai\models
+#   VAL_VALHALLA_ROOT=C:\Ai\Valhalla-main
+#   FATE_API_KEY=your-secret-key-here
 ```
 
-冒烟顺序（任何环境变更后）：doctor → run_pipeline（2 场景）→
-/health + /v1/select 各打一次 → 回归脚本。三步任一失败不发布。
+### 4.2 安装与自检
+
+```powershell
+# 安装依赖（新机器）
+.\install.ps1                                   # 含 doctor 自检
+
+# 查看完整配置和诊断（建议每次环境变更后执行）
+cd code
+..\.venv\Scripts\python.exe doctor.py          # 全绿再往下
+# 产生 doctor-config.json 包含完整配置详情
+```
+
+### 4.3 运行管道和服务
+
+```powershell
+# 列出可用角色
+..\.venv\Scripts\python.exe run_pipeline.py --list-characters
+
+# 默认角色（aria）运行
+..\.venv\Scripts\python.exe run_pipeline.py --scenes park,harbour,library --seeds 7,8
+
+# 使用特定角色
+..\.venv\Scripts\python.exe run_pipeline.py --character aria --scenes park,harbour --seeds 7
+
+# API 服务
+..\.venv\Scripts\python.exe fate_service.py     # http://127.0.0.1:8790/health
+
+# 回归测试（发布前必跑）
+..\.venv\Scripts\python.exe test_fate_consolidation.py   # 16 项须全过
+
+# 新增单元测试（验证配置和角色加载）
+..\.venv\Scripts\python.exe test_settings.py
+..\.venv\Scripts\python.exe test_character_loader.py
+```
+
+### 4.4 冒烟顺序（任何环境变更后）
+
+1. `doctor.py` 全绿（包括 Valhalla 路径检查）
+2. `run_pipeline.py` 2 场景冒烟（默认 park,harbour）
+3. `/health` + `/v1/select` 各打一次
+4. 回归脚本全过（test_fate_consolidation.py、test_settings.py、test_character_loader.py）
+
+三步任一失败不发布。
 
 ## 5. 发布判定规则
 

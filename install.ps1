@@ -4,7 +4,8 @@
 # by this script (see docs/LAUNCH.md for the model list); point
 # VAL_MODELS_ROOT at an existing model library to skip downloads.
 $ErrorActionPreference = "Stop"
-$Root = Split-Path -Parent $PSScriptRoot
+# $PSScriptRoot is the directory containing this script (the repo root)
+$Root = $PSScriptRoot
 $Venv = Join-Path $Root ".venv"
 
 Write-Host "== val-video-boost install ==" -ForegroundColor Cyan

@@ -20,23 +20,12 @@ import sys
 import threading
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[2]
-ENCODE = REPO / "tools" / "valhalla_dl_front" / "encode.py"
-if not ENCODE.is_file():  # copied out of Valhalla-main: use the original sidecar
-    _alt = Path(r"C:\Ai\Valhalla-main\tools\valhalla_dl_front\encode.py")
-    if _alt.is_file():
-        ENCODE = _alt
-RUNTIME = Path(
-    __import__("os").environ.get(
-        "VALHALLA_BASE_EXE",
-        r"C:\Ai\Valhalla-main\target\release\valhalla_base.exe",
-    )
-)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import settings
 
 FACT = "The passphrase is Qingniao."
 PROTOCOL = "ValhallaBase primary protocol is valhalla-base-v1."
 BRIDGE_NOTE = "Video enters the Fate session as pooled frame features on the image port."
-LM_DIR = Path(os.environ.get("VALHALLA_QWEN_MODEL_DIR", r"C:\Ai\models\Qwen2.5-3B-Instruct"))
 
 CFG = {
     "decode": "native",
@@ -68,9 +57,10 @@ PIPELINE_CFG = {
 
 
 def encode(modality: str, **fields) -> tuple[list[float], str]:
+    encode_script = settings.require_valhalla_encode()
     payload = {"modality": modality, **fields}
     proc = subprocess.run(
-        [sys.executable, str(ENCODE)],
+        [sys.executable, str(encode_script)],
         input=json.dumps(payload),
         capture_output=True,
         text=True,
@@ -266,10 +256,9 @@ def synthesize_tts(text: str, wav_path: Path, voice_dir: Path) -> str:
 
 
 def valhalla(payload: dict, timeout: int = 120) -> dict:
-    if not RUNTIME.is_file():
-        raise FileNotFoundError(f"找不到 valhalla_base.exe：{RUNTIME}")
+    runtime = settings.require_valhalla_exe()
     proc = subprocess.run(
-        [str(RUNTIME), "--json-error"],
+        [str(runtime), "--json-error"],
         input=json.dumps(payload),
         capture_output=True,
         text=True,
@@ -307,9 +296,10 @@ def ask(question: str, features: dict, session: dict | None, context_items: list
 class ValhallaPipeline:
     """One warm valhalla_base --repl. The 3B weights stay loaded across fusion turns."""
 
-    def __init__(self, model_dir: Path = LM_DIR) -> None:
-        if not RUNTIME.is_file():
-            raise FileNotFoundError(f"找不到 valhalla_base.exe：{RUNTIME}")
+    def __init__(self, model_dir: Path | None = None) -> None:
+        runtime = settings.require_valhalla_exe()
+        if model_dir is None:
+            model_dir = settings.VALHALLA_QWEN_MODEL
         if not (model_dir / "model.safetensors.index.json").is_file() and not (model_dir / "model.safetensors").is_file():
             raise FileNotFoundError(f"找不到 Qwen 权重：{model_dir}")
         env = os.environ.copy()
@@ -319,7 +309,7 @@ class ValhallaPipeline:
         self.model_dir = model_dir
         self.stderr: list[str] = []
         self.proc = subprocess.Popen(
-            [str(RUNTIME), "--repl"],
+            [str(runtime), "--repl"],
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
@@ -327,7 +317,7 @@ class ValhallaPipeline:
             encoding="utf-8",
             errors="replace",
             env=env,
-            cwd=str(RUNTIME.parent),
+            cwd=str(runtime.parent),
         )
         threading.Thread(target=self._drain, daemon=True).start()
 

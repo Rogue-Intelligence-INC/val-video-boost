@@ -25,10 +25,14 @@ model only needs a profile + a probe run to join the framework.
 from __future__ import annotations
 
 import json
+import sys
 from pathlib import Path
 
-MODELS_ROOT = Path(r"C:\Ai\models")
-PROJECT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import settings
+
+MODELS_ROOT = settings.MODELS_ROOT
+PROJECT = settings.PROJECT_ROOT
 
 # Family knowledge measured on THIS machine (source report in each record).
 FAMILY_KB = {

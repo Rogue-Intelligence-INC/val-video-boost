@@ -28,10 +28,13 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import settings
+
 UA = "Valhalla/1.0"
 HF = "https://huggingface.co"
 MIRROR = os.environ.get("HF_ENDPOINT", "https://hf-mirror.com").rstrip("/")
-MODELS_ROOT = Path(os.environ.get("VALHALLA_MODELS_ROOT", r"C:\Ai\models"))
+MODELS_ROOT = settings.MODELS_ROOT
 
 IMAGE_REPO = "stabilityai/sd-turbo"
 IMAGE_XL_REPO = "stabilityai/sdxl-turbo"

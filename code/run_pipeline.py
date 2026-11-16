@@ -36,10 +36,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import adaptive_framework as af
 import download
+import settings
+from character_loader import list_characters
 from fate_interface import FateInterface
 from test_big_models import load_pipe
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = settings.PROJECT_ROOT
 SIZE, STEPS = 768, 25
 SCENE_TEXT = {
     "park": "standing outdoors in a sunlit park, natural daylight, waist-up, facing camera",
@@ -72,7 +74,19 @@ def main() -> int:
     ap.add_argument("--k", type=int, default=4, help="candidates per segment")
     ap.add_argument("--hero", default=None, help="existing same-source hero image to enroll")
     ap.add_argument("--out", default=str(ROOT / "reports" / "pipeline_run"))
+    ap.add_argument("--character", default=None, help="character ID to use (default: aria)")
+    ap.add_argument("--list-characters", action="store_true", help="list available characters and exit")
     args = ap.parse_args()
+
+    if args.list_characters:
+        available = list_characters()
+        if available:
+            print("Available characters:")
+            for char_id in available:
+                print(f"  - {char_id}")
+        else:
+            print("No characters found in:", settings.CHARACTERS_DIR)
+        return 0
 
     scenes = [s.strip() for s in args.scenes.split(",") if s.strip()]
     seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
@@ -80,16 +94,39 @@ def main() -> int:
     out.mkdir(parents=True, exist_ok=True)
 
     route = af.route("identity_no_plugin", registry=af.load_measured_registry())
-    fate = FateInterface()
+    fate = FateInterface(character_id=args.character)
     pipe = load_pipe(download.IMAGE_JUG_DIR)
-    manifest: dict = {"protocol": "fate-pipeline-run-v1", "route": route,
-                      "k": args.k, "tau": fate.tau, "segments": []}
+    
+    # Get scene descriptions from character if available
+    if fate.character:
+        print(f"Using character: {fate.character.name} ({fate.character.id})")
+        char_scenes = fate.character.scenes
+        # Validate that requested scenes exist in character
+        for scene in scenes:
+            if scene not in char_scenes:
+                available = ", ".join(char_scenes.keys())
+                print(f"Warning: scene '{scene}' not defined for character '{fate.character.id}'")
+                print(f"Available scenes: {available}")
+                print(f"Using scene name as-is: {scene}")
+    else:
+        char_scenes = SCENE_TEXT
+        print("Using default character (aria) with fallback scenes")
+    manifest: dict = {
+        "protocol": "fate-pipeline-run-v1",
+        "route": route,
+        "k": args.k,
+        "tau": fate.tau,
+        "character_id": fate.character.id if fate.character else None,
+        "segments": []
+    }
     chosen_paths: list[Path] = []
     try:
         # hero: generate (or designate) and enroll once
         hero_path = Path(args.hero) if args.hero else out / "hero_studio.png"
         if not args.hero:
-            gen(pipe, fate.supply("studio"), hero_path, seeds[0])
+            # Use 'studio' scene if available, otherwise use first scene
+            hero_scene = "studio" if "studio" in char_scenes else list(char_scenes.keys())[0]
+            gen(pipe, fate.supply(hero_scene), hero_path, seeds[0])
         if not fate.enroll_face(hero_path):
             print(f"FATAL: no face detectable in hero {hero_path}; abstaining whole run")
             return 2
@@ -99,7 +136,13 @@ def main() -> int:
         seg = 0
         for seed in seeds:
             for scene in scenes:
-                spec = fate.supply_desc(SCENE_TEXT.get(scene, scene))
+                # Get scene description from character or use SCENE_TEXT or as-is
+                if fate.character and fate.character.has_scene(scene):
+                    scene_desc = fate.character.get_scene(scene)
+                else:
+                    scene_desc = char_scenes.get(scene, scene)
+                
+                spec = fate.supply_desc(scene_desc)
                 pool = []
                 for k in range(args.k):
                     p = out / "pool" / f"seg{seg:02d}_s{seed}_{scene}_c{k}.png"
@@ -107,12 +150,15 @@ def main() -> int:
                     pool.append(p)
                 picked = fate.select(pool)
                 gate = fate.verify(Path(picked["chosen"])) if picked["chosen"] else {"passed": False}
-                entry = {"segment": seg, "seed": seed, "scene": scene,
-                         "fingerprint": spec["identity_fingerprint"],
-                         "pool_scores": [s["cos"] for s in picked["scores"]],
-                         "chosen": picked["chosen"], "chosen_cos": picked["chosen_cos"],
-                         "status": "ABSTAINED" if picked["abstained"] else "ACCEPTED",
-                         "verify_passed": bool(gate["passed"])}
+                entry = {
+                    "segment": seg, "seed": seed, "scene": scene,
+                    "fingerprint": spec["identity_fingerprint"],
+                    "character_id": spec.get("character_id"),
+                    "pool_scores": [s["cos"] for s in picked["scores"]],
+                    "chosen": picked["chosen"], "chosen_cos": picked["chosen_cos"],
+                    "status": "ABSTAINED" if picked["abstained"] else "ACCEPTED",
+                    "verify_passed": bool(gate["passed"])
+                }
                 manifest["segments"].append(entry)
                 if picked["chosen"]:
                     chosen_paths.append(Path(picked["chosen"]))

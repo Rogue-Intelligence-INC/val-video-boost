@@ -36,22 +36,30 @@ Known ceiling (measured on images, reports/prior_character_image_report.json):
 from __future__ import annotations
 
 import json
+import sys
 import time
 from pathlib import Path
 
-import module_patch
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import settings
 
-YUNET = Path(r"C:\Ai\models\yunet\face_detection_yunet_2023mar.onnx")
+import module_patch
 
 
 class FaceVerifier:
     """YuNet detection + face-crop L2 / colour-histogram distance."""
 
-    def __init__(self):
+    def __init__(self, yunet_path: Path | None = None):
         import cv2
 
         self._cv2 = cv2
-        self.detector = cv2.FaceDetectorYN.create(str(YUNET), "", (720, 480), 0.6, 0.3, 50)
+        yunet = yunet_path or settings.YUNET_MODEL
+        if not yunet.exists():
+            raise FileNotFoundError(
+                f"YuNet model not found at {yunet}\n"
+                f"Set VAL_YUNET_MODEL to the correct path."
+            )
+        self.detector = cv2.FaceDetectorYN.create(str(yunet), "", (720, 480), 0.6, 0.3, 50)
 
     def face_crop(self, image_path: Path, size: int = 128):
         import numpy as np
